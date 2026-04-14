@@ -1,0 +1,715 @@
+/*! 
+* layout 
+*/
+body > main > header,
+body > main > article
+    //padding: 0 padXL padM padXL
+    @media dtrigger
+        padding: padM padL*1.5 padM padL*1.5
+    @media ie
+        display: block
+    
+
+main > *:nth-child(1)
+    background-color: brand4
+    @media dtrigger
+        padding: padM padL*1.5 padL padL*1.5
+
+main > *:nth-child(2)
+    background-color: brand4
+    @media dtrigger
+        padding: padM padL*1.5 padL padL*1.5
+
+body > main > article:last-of-type
+  @media dtrigger
+        padding-bottom: padL
+  
+@media lgdesktopRule
+    #cNav > nav,
+    #dNav > nav,
+    footer > *,
+    main > * > *
+        max-width: 2000px
+        margin-left: auto !important
+        margin-right: auto !important
+
+// footer
+body > footer
+    border-top: 1px solid white
+    padding: padXL 7vw
+    @media phoneRule
+        margin-top: marXL
+    @media dtrigger
+        padding: padM padL*1.5
+
+body > footer 
+    background-color: brand4
+body > footer div.content
+    @media tabletRule
+        flex-wrap: wrap
+body > footer div.content > section
+    @media phoneRule
+        margin-bottom: marXL
+    @media tabletRule
+        flex:0 1 auto
+        flex-basis: 40%
+body > footer div.content > section:last-child
+     @media tabletRule
+        flex-basis: 100%
+// custom footer    
+body > footer div.content
+    @media dtrigger
+        column-gap: marM
+        justify-content: flex-start
+body > footer div.content > section
+    @media dtrigger
+        flex:1 1 20%
+        //padding-right: 3%
+body > footer div.content > section:last-child
+    @media dtrigger
+        margin-left: auto
+footer div > header
+        padding-bottom: padM    
+
+
+// z-indexes for main content
+/*
+main > * 
+    position: relative
+    z-index: 1000
+main > * > div
+    z-index: 2000
+main > * > div > div
+    z-index: 3000
+main > * > div > div > div
+    z-index: 4000
+*/    
+main > * > div > div > div > div.control
+    z-index: 5000
+div#cNav
+    z-index: 9000
+a#toTop
+    z-index: 10000    
+div.mblnav
+    z-index: 11000
+ div#mNav
+    z-index: 12000         
+
+// margin padding
+main > *
+    @media phoneRule
+        //{marginM}
+        
+   /* @media tabletRule
+        {marginT} */
+
+
+// flex and columns and grid
+div.content
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    padding: 0
+    @media ttrigger
+        padding: 2vw 0 0 0
+        column-gap: 2vw
+        flex-direction: row
+        justify-content: space-between
+div.content.rowAlignCentre
+    @media ttrigger
+        align-items: center
+div.content > section
+    @media ttrigger
+        flex: 1 1 auto 
+        flex-basis: 50%
+main > *:not(.grid) div.content
+    @media tabletRule
+        flex-wrap: wrap
+main div > header,
+footer header,
+footer section
+    padding: padM
+    @media tabletRule 
+        padding: padXS padStd padXS padStd
+main > *:not(.grid) div.content > section,
+main > *:not(.grid) div.contentNoFlex > section
+    padding: padXS padM padXS padM
+    @media phoneRule
+        padding: padXL padXL 0 padXL
+    @media tabletRule 
+        flex: 0 1 auto 
+        flex-basis: 46%
+        padding: padXS padStd padXS padStd
+main div > header
+    @media phoneRule
+        padding: padXL padXL 0 padXL
+
+main > *:not(.grid) div.contentNoFlex > section
+    @media smallDesktop
+        padding-right: 0
+        padding-left:0
+
+main > *:first-child div.content
+    @media tabletRule
+        flex-direction: column
+main > *:first-child div.content > section
+    @media ttrigger
+        flex: 1 1 auto
+        flex-basis: 50%
+
+main > .grid div.content
+    @media mtrigger
+        flex-direction: row 
+        flex-wrap: wrap
+        padding-left: padXS
+        padding-right: paXS
+    @media ttrigger
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr))
+        grid-column-gap: padM
+        grid-row-gap: padXS
+     @media phLandscape
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr))
+        grid-column-gap: padM
+        grid-row-gap: padXS
+    @media dtrigger
+        grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr))
+        grid-column-gap: padXS
+        grid-row-gap: padXS
+    @media lgdesktopRule
+        grid-template-columns: repeat(auto-fill, minmax(12vw, 1fr))
+        grid-column-gap: padXS
+        grid-row-gap: padXS
+
+main > .grid div.content > section
+    display: flex
+    justify-content: center
+    align-items: center
+    @media mtrigger
+        flex: 0 1 auto
+        flex-basis: 100%
+        margin: marXL marXL 0 marXL 
+        min-height: 20vw
+    @media ttrigger
+        min-height: 27.5vw
+    @media dtrigger
+        min-height: 16.5vw    
+    @media ie 
+        flex-basis: 20%
+        min-height: 20vw
+    @media phLandscape
+        min-height: 25.5vw
+    @media ie
+        height:20em
+main > .grid.filled div.content > section
+    background-color: whiteAlp75
+
+main > .grid div.content > section > div,
+main > .grid div.content > section > a
+    display: flex
+    padding: padM
+    align-self: stretch
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    flex: 1 1 auto
+    @media mtrigger
+        align-items: flex-start
+main > .grid div.content > section > a
+    text-decoration: none
+main > .grid.links div.content > section:hover
+    background-color: whiteAlp50
+
+
+
+
+
+/* 2025 design page grids */
+main > .grid.designThumbs div.content
+    @media mtrigger
+        flex-direction: row 
+        flex-wrap: wrap
+        padding-left: padXS
+        padding-right: paXS
+    @media ttrigger
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr))
+        grid-column-gap: 0
+        grid-row-gap: 1em
+     @media phLandscape
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr))
+        grid-column-gap: 0
+        grid-row-gap: 0
+    @media dtrigger
+        grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr))
+        grid-column-gap: 0
+        grid-row-gap: 1em
+    @media lgdesktopRule
+        grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr))
+        grid-column-gap: 0
+        grid-row-gap: 0
+
+main > .grid.designThumbsLarge div.content
+    @media dtrigger
+        grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr))
+        grid-column-gap: 0
+        grid-row-gap: 1em
+    @media lgdesktopRule
+        grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr))
+        grid-column-gap: 0
+        grid-row-gap: 0
+
+
+main > .grid.designThumbs div.content
+    /*border-left:1px solid blackAlp10
+    border-top:1px solid blackAlp10*/
+    padding-top: 0
+
+main > .grid.designThumbs div.content > section
+    @media mtrigger
+        flex: 0 1 auto
+        flex-basis: 100%
+        margin: marXL marXL 0 marXL 
+        min-height: 20vw
+    @media ttrigger
+        min-height: 27.5vw
+        border-bottom: 1px solid blackAlp10
+        /*border-right: 1px solid blackAlp10*/
+    @media dtrigger
+        min-height: 16.5vw    
+    @media ie 
+        flex-basis: 20%
+        min-height: 20vw
+    @media phLandscape
+        min-height: 25.5vw
+    @media ie
+        height:20em
+
+main > .grid.designThumbs:not(.designThumbsLarge) div.content > section
+    @media phoneRule
+        min-height: 70vw !important
+        border-bottom: 1px solid blackAlp10
+
+main > .grid.designThumbsLarge div.content
+    @media ttrigger
+        column-gap: 3em
+        row-gap: 3em
+
+main > .grid.designThumbsLarge div.content > section
+    @media ttrigger
+        border-bottom: none
+
+main > .grid.designThumbs div.content > section > div,
+main > .grid.designThumbs div.content > section > a
+    display: flex
+    padding: 0
+    align-self: stretch
+    justify-content: flex-end
+    align-items: flex-end
+    flex-direction: column
+    flex: 1 1 auto
+
+
+main > .grid.designThumbs.noFlex div.content
+    row-gap: 5em
+    @media phoneRule
+        row-gap: 2em
+
+main > .grid.designThumbs.noFlex div.content > section
+    display: block
+
+main > .grid.designThumbs.noFlex div.content > section > a.thumbLink
+    margin-bottom: 2em
+
+
+main > .grid.designThumbs.noFlex div.content > section > *:not(a)
+    @media smallDesktop
+        padding-top: 1em
+        padding-bottom: 1em
+    @media effectsBreak
+        padding-left: 12.5% !important
+        padding-right: 15% !important
+
+
+main > .grid.designThumbs.noFlex div.content > section > h3
+    @media phoneRule
+        padding-bottom: 1em
+
+
+
+
+
+
+
+
+
+
+// custom grid
+main > .grid.fancy div.content > section
+        justify-content: flex-start
+        align-items: flex-end
+        flex-basis: 100%
+
+main > .grid.fancy.links div.content > section
+    @media mtrigger
+        background-color: blackAlp50
+
+/* 
+main > .grid.fancy.links div.content > section a > p
+    @media mtrigger
+        display: none
+*/
+main > .grid.fancy.filled div.content > section
+        background-color: white
+
+main > .grid.fancy div.content > section:nth-child(1)
+    @media dtrigger
+        grid-column: 1 / 3
+        grid-row: 1 / 3
+main > .grid.fancy div.content > section:nth-child(10)
+    @media dtrigger
+        grid-column: 5 / 7
+        grid-row: 1 / 4
+main > .grid.fancy div.content > section > div,
+main > .grid.fancy div.content > section > a
+    justify-content: flex-start
+    align-items: flex-start
+    @media mtrigger
+        padding: padXL padL
+    @media dtrigger
+        justify-content: flex-end
+/*
+@media mtrigger
+    main > .grid.fancy div.content > section > a
+        padding: 0
+        margin: 0
+        padding-top: 25vw
+        display: flex
+        flex-direction: column-reverse
+    main > .grid.fancy div.content > section > a > *
+        background-color: mainBG
+        color: brand1
+        flex-basis: 100%
+        margin:0
+        max-width: 100%
+        width:100%
+  
+        border: 1px solid blue
+*/        
+
+
+
+@media dtrigger
+    main > .grid.fancy div.content > section > a > p
+        opacity: 0
+    main > .grid.fancy.links div.content > section > a:hover
+        background-color: blackAlp75
+    main > .grid.fancy.links div.content > section > a:hover p
+        opacity: 0.9
+      
+
+@media ie
+    .grid div.content
+        display: flex
+        flex-wrap: wrap
+        flex: 1 1 auto
+    .grid div.content > section
+        flex-basis: 25%
+        margin: marXXS
+    .grid div.content > section > *:first-child
+        flex-wrap: wrap
+        padding:10%
+        width:80%
+
+
+// inset body copy control
+
+main > .copy div.content > section
+    max-width: 90%
+    flex-basis: 90%
+    @media phoneRule
+        padding: 10vw
+    @media tabletRule
+        padding-left: 10vw
+        padding-right: 10vw
+    @media dtrigger
+        padding-left: 22vw
+        padding-right: 22vw
+
+
+//main > .copy div.content > section,
+main > .copyMulti div.content > section
+    @media dtrigger
+        padding: padXS padM padXS padM 
+main > .copyMulti div.content > section:first-of-type
+    @media dtrigger
+        padding-left: 0 
+        margin-left: padL 
+main > .copyMulti div.content > section:last-of-type
+    @media dtrigger
+        padding-right: padL
+
+
+
+div.selections
+    @media phoneRule
+        padding: padXL padXL 0 padXL
+div.selections div.selectionsHeader
+    justify-content: flex-start
+    align-items: flex-end
+    column-gap: 0
+    @media phoneRule
+        display: block
+div.selections div.selectionsContent
+    justify-content: flex-start
+    column-gap: 0
+    @media phoneRule
+        display: block
+        
+div.selections div.selectionsHeader section
+div.selections div.selectionsContent section
+    flex:0 1 auto
+    @media phoneRule
+        padding-top: padL
+        padding-right: 0
+        padding-left: 0
+div.selections div.selectionsHeader section:first-of-type,
+div.selections div.selectionsContent section:first-of-type
+    flex-basis: 100px
+    flex-shrink: 0
+div.selections div.selectionsContent section:first-of-type
+    @media phoneRule
+        display: none
+div.selections div.selectionsHeader section:last-of-type
+div.selections div.selectionsContent section:last-of-type
+    padding-left: 0
+    margin-right: 100px + padL
+    flex-basis: 100%
+    @media phoneRule
+        margin-right: 0
+
+div.selections div.selectionsHeader section
+    border-bottom: 3px solid brand4
+div.selections div.selectionsHeader section:first-of-type
+    border-bottom: none
+div.selections.inactive div.selectionsHeader section
+    border-bottom-color: brand1
+div.selections.inactive div.selectionsHeader 
+    opacity: 0.1
+div.selections.inactive div.selectionsContent 
+    display: none
+
+div.selections div.content.selectionsHeader
+    padding-top: 0
+
+
+
+
+
+
+// alert bar
+#alert
+    padding: padXS padXS 0 padXS
+#alert div.content
+    // background-color: blackAlp10
+    border-bottom: 4px solid brand1
+    @media mtrigger 
+        border:none
+        background-color: white
+        {marginALL}
+        padding: padM padStd 
+#alert div.content > section
+    padding: padXXS padStd*1.75 0 padM*1.25
+    @media dtrigger
+        padding: padStd padXS*1.5 padStd padStd
+        max-width: 95%
+#alert.center div.content,
+#alert.center div.content > section
+    text-align: center
+
+
+
+// navs
+#navSpacer
+    height: navSpacer
+    width: 100vw
+    background-color: white
+    @media phLandscape
+        height: navSpacerL
+#mNav
+    background-color: brand4
+    height: navSpacer
+    width: 100vw
+    position fixed
+    padding 0 !important
+    margin 0
+    overflow hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    @media phLandscape
+        height: navSpacerL
+#cNav,
+#dNav
+    padding: padXXS padM
+    background-color: brand4
+#mNav nav,
+#cNav nav,
+#dNav nav
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    flex: 1 1 auto
+#mNav nav
+    padding: 0 padL
+    align-items: center
+    @media phLandscape
+        padding: 0 padM
+        padding-left: 0
+#mNav nav > *:first-child
+    margin-right:auto
+#mNav nav > div:nth-child(3)
+    margin-left: 15px
+#cNav nav,
+#dNav nav
+    // border-bottom: 2px solid brand1   
+#cNav nav
+    padding: padStd
+    align-items: center
+#dNav nav
+    padding: padStd
+@media mtrigger
+    div#dNav,
+    div#cNav
+        display: none;
+@media dtrigger
+    div#mNav,
+    div#navSpacer
+        display: none;
+
+//mobile nav drawer
+div.navSpace
+    height: navSpacer
+    @media phLandscape
+        height: navSpacerL
+div.mblnav
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: brand4
+div.mblnavContainer
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    /* The main point: */
+    overflow-y: auto
+    /* Optional but highly reccomended: enables momentum scrolling on iOS */
+    -webkit-overflow-scrolling: touch
+.open
+    opacity: 1 !important
+div.mblnavSection
+    padding: padL 
+    {marginVT}
+@media mtrigger
+    html.noscroll 
+        overflow: hidden
+    body.noscroll
+        overflow: visible
+        height: 100%
+
+
+// picturefill and image based sections
+main > * > div.picturefill-background div.content
+    min-height: 60vh
+    justify-content: center
+    align-items: flex-start
+    @media ie
+        height:35em
+    @media tabletRule
+        justify-content: center
+        align-items: flex-start
+        flex-direction: column
+    @media dtrigger 
+        justify-content: flex-end
+        align-items: center
+
+/* main > * > .btm div.content
+    justify-content: flex-end
+    align-items: flex-start
+    @media tabletRule
+        justify-content: flex-end
+        align-items: flex-start
+        flex-direction: column
+    @media dtrigger 
+        align-items: flex-end !important
+*/
+main > * > div.picturefill-background.full div.content,
+main .full div.content
+    min-height: 60vh
+    @media ie
+        height:40em
+    @media dtrigger 
+        min-height: 60vh
+    @media tabletRule
+        align-items: flex-start
+main > * > div.picturefill-background.top div.content
+    align-items: flex-start      
+main > * > div.picturefill-background div.content section 
+    @media tabletRule
+        flex:0 0 80% !important 
+main > * > div.imageBlocks section
+    min-height: 40vh 
+    @media dtrigger 
+        min-height: 20vw
+    @media ie 
+        min-height: 21em    
+main > * > div.imageBlocks section
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: flex-start
+    @media phoneRule
+        //{marginM}
+        padding: padXL !important
+        margin: marXL marXL 0 marXL
+    @media tabletRule
+        {marginT}
+        padding-top: padL !important
+        padding-bottom: padL !important
+    @media dtrigger 
+        margin-bottom: 0
+        padding-top: padL*0.9 !important
+        padding-bottom: padM*0.9 !important
+main > * > div.picturefill-background div.content/*,
+main > * > div.imageBlocks section > *:last-child*/
+    padding-bottom: padL
+    padding-top: padL
+    @media phoneRule
+        padding-bottom: padXL
+        padding-top: padXL
+main > * > div.imageBlocks section > a.cta
+   margin-top: auto
+
+
+
+
+
+
+
+.simpleFlex
+    display: flex
+    flex-wrap: nowrap
+    column-gap: 20px
+    align-items: center
+
+
+
+@media ie
+    //target IE (not edge)

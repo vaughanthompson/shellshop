@@ -1,0 +1,183 @@
+﻿
+<!DOCTYPE html>
+<!-- end cms landing content -->
+<html>
+
+
+
+    <a href="#top" id="toTop" class="icon icon-arrow-up"></a>
+
+
+
+
+    <!-- mobile nav -->
+    <!-- mobile nav -->
+    <!-- mobile nav -->
+    <!-- mobile nav -->
+
+    <div id="mNav">
+        <nav>
+            <div>
+                <a href="/">
+                    <img src="/images/logos/TDX%20Mono%20Positive%20RGB.svg" alt="TDX">
+                </a>
+                Shell Shop
+            </div>
+            <div>
+                <a href="/cart">$0.00 (0)</a>
+            </div>
+            <div>
+                <a href="#" id="navTrigger" class="icon icon-ico-menu"></a>
+                <a href="#" id="navClose" class="icon icon-ico-close"></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mblnav">
+        <div class="mblnavContainer">
+            <div class="navSpace">&nbsp;</div>
+
+            <div class="mblnavSection">
+                <ul class="vanilla">
+                    <li><a href="/projects">Our work</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/get-started">FREE project designer</a></li>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </div>
+
+            <div class="navSpace">&nbsp;</div>
+        </div>
+    </div>
+
+
+
+    <div id="navSpacer"></div>
+
+
+    
+
+
+
+
+
+
+
+    <!-- desk nav -->
+    <!-- desk nav -->
+    <!-- desk nav -->
+    <!-- desk nav -->
+
+
+
+
+    <div id="cNav">
+        <nav>
+            
+            
+
+            <div>
+                <ul>
+                <li><a href="/"><img src="/images/logos/TDX%20Mono%20Positive%20RGB.svg" alt="TDX" style="width:150px;"></a></li>
+                <li><h3>Shell Shop</h3></li>
+                <li><h6>The best place to buy Shell oils and lubricant in New Zealand</h6></li>
+            </ul>
+            </div>
+
+            <div>
+                <ul>
+                <li><a href="/cart" class="cart">$0.00 (0 item/s)</a></li>
+                <li><a href="/account">My Account</a></li>
+                <li><img src="/images/icons/icons2022/brand-shell-CLR.svg" style="width:150px"></li>
+            </ul>
+
+            
+            </div>
+            
+            
+        </nav>
+    </div>
+
+
+    
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        
+            // Mobile Navigation - FOR LOCALHOST TESTING ONLY
+            $.localScroll({
+                target: 'body',
+                queue: false,
+                hash: false,
+                duration: 500,
+                easing: 'easeOutQuad'
+            });
+
+            $('#toTop').css('opacity','0.0');
+                new Waypoint({
+                    element: document.getElementsByTagName('main'),
+                    handler: function(direction) {
+                        if (direction === 'down') {
+                            $('#toTop').fadeTo(1000,'1.0');
+                        }
+                        else {
+                            $('#toTop').fadeTo(1000,'0.0');
+                        }
+                    },
+                offset: '0'
+            })
+
+            $('#navClose').hide();
+
+
+            $('#navClose').click(function(){
+                $(this).hide();
+                $('#navCart').show();
+                $('#navTrigger').show();
+                $("div.mblnavContainer").scrollTo(0);
+                $('div.mblnav').hide();
+                $('html, body').removeClass('noscroll');
+                return false;
+            });
+
+            $('#navTrigger').click(function(){
+                $(this).hide();
+                $('#navCart').hide();
+                $('#navClose').show();
+                $('div.mblnav').fadeTo(400,1);
+                $('html, body').addClass('noscroll');
+                return false;
+            });
+
+        
+            
+    
+        });
+
+
+    </script>
+
+
+       
+    
+    
+    
+
+
+</html>
+
+
+
+
+
+
+
+
+
+

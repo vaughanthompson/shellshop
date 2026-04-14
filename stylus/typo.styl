@@ -1,0 +1,150 @@
+/*! 
+* typography 
+*/
+
+
+a:link, a:visited
+    text-decoration: underline
+a.icon
+    text-decoration: none
+a:link,
+.rev a:link,.rev span,
+.mblnav a:link, .mblnav a:visited
+    color: brand1
+a:visited, .rev a:visited
+    color: brand1
+a:hover, a:active
+    text-decoration: none
+ul a:link, ul a:visited
+    color: brand1
+    text-decoration: none
+    padding: padXS 0 0 0
+    letter-spacing: 0 
+    display: inline-block
+    {test}
+nav a:link
+    font-weight: 600
+nav a:link.activeLink, nav a:visited.activeLink
+    padding-bottom: padXS*0.7
+    color: brand3
+    border-bottom: 3px solid brand3
+    
+footer nav li 
+    margin-bottom: 0.5em
+footer nav a:link.activeLink
+    margin-bottom: 1em
+// underline effect
+/*
+nav ul a:not(.activeLink):link::after , nav ul a:not(.activeLink):visited::after 
+    content: ""
+    display: block
+    width: 0
+    border-bottom: 3px solid brand1
+    transition: width 0.3s
+    padding: 0 0 padXS*0.7 0
+nav ul a:not(.activeLink):hover::after
+    width: 100%
+*/
+
+p, li, a, td
+    color: brand1
+    line-height: 125%
+    //letter-spacing: -0.01em
+
+
+
+h1, h2, h3, h4 ,h5, h6
+    margin: 0
+    margin-bottom: marXS
+
+// defaults   
+h1, .h1
+    font-weight: 800
+    font-size: 4.7em
+    line-height: 1em
+    letter-spacing: -0.03em
+    margin-bottom: 1.5vw
+    @media phoneRule
+        font-size: 11vw
+        margin-bottom: 10vw
+    
+h2, .h2
+    font-weight: 600
+    font-size: 3em
+    line-height: 1.05em
+    letter-spacing: -0.02em 
+    @media phoneRule
+        font-size: 8vw
+        margin-bottom: 5vw
+        
+h3, .h3
+    font-weight: 600
+    font-size: 2.2em
+    line-height: 115%
+    letter-spacing: -0.01em 
+h4, .h4
+    font-weight: 500
+    font-size: 1.6em
+    line-height: 130%
+    //letter-spacing: -0.01em
+h4 span
+    font-weight: 400    
+h5, .h5
+    font-weight: 400
+    font-size: 1.2em
+    line-height: 125%
+    margin-bottom: 0
+    //max-width:90%
+    //letter-spacing: -0.02em
+h5 span
+    font-weight: 400
+    //letter-spacing: -0.01em      
+h6, .h6
+    font-weight: 500
+    font-size:1.2em
+    line-height: 130%
+    max-width:90%
+    //letter-spacing: -0.015em
+p
+    font-weight: 400
+    font-size: 1.1em
+    line-height: 1.4em
+    margin-top: 0em
+main .content li
+    font-size: 1.2em
+    line-height: 1.4em
+
+strong 
+    font-weight: 800
+    //letter-spacing: -0.015em
+
+// modify typo
+.small
+    font-size: 90% 
+
+
+main .content ul a:link,  main .content ul a:visited
+    text-decoration: underline
+
+
+
+.rev h1,.rev h2,.rev h3,.rev h4,.rev h5,.rev h6,
+.rev .h1,.rev .h2,.rev .h3,.rev .h4,.rev .h5,.rev .h6,
+.rev p,.rev li,.rev a,.rev td
+    color: white
+.huge
+    letter-spacing: -0.06em
+
+
+
+/*
+input[type=radio] 
+    accent-color: red
+*/
+ul.vanilla
+ul.vanilla li 
+    border: none
+ul.vanilla
+    margin-top: 0
+ul.vanilla li 
+    padding:padXXS

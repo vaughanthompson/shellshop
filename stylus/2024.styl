@@ -1,0 +1,261 @@
+// 2024
+.hidebgDesk
+    @media ttrigger
+        background: none !important
+
+.arrow-down
+  width: 0
+  height: 0
+  border-left: 30px solid transparent
+  border-right: 30px solid transparent
+  border-top: 30px solid
+
+.arrow-down
+  border-top-color: brand4
+
+
+.redacted
+    background-color: whiteAlp50
+    display: inline
+    padding-right: 1vw
+    background-clip: padding-box
+    line-height: 140%
+
+.large-responsive
+    font-size: 7.8vw
+    letter-spacing: -0.08em
+    line-height: 0.95em
+    @media phoneRule
+        font-size: 10vh
+    @media lgdesktopRule
+        font-size: 5vw
+
+a.wrapperLink
+    text-decoration: none
+
+a.wrapperLink
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: space-between
+    text-wrap: balance
+    @media phoneRule
+        height: 75vh
+
+.imageBlocks a.wrapperLink p
+    width: 70%
+    @media phoneRule
+        width: 70%
+
+.balanceMe 
+    text-wrap: balance
+
+/* slick slider */    
+@media phoneRule
+    div.item div.itemContent p.large-responsive
+        margin-bottom: 15px
+    div.item div.itemContent.multiply
+        background-blend-mode: screen
+    div.item.rev div.itemContent.multiply
+        background-blend-mode: overlay
+
+div.item div.itemContent
+    height: largeH*1.2
+    @media phoneRule
+        height: auto
+        padding-top: padXL*2
+        padding-bottom: padXL
+    @media ttrigger
+       max-height: 1100px
+       
+
+div.slickSlider div.item div.itemContent
+    height: largeH*1.2
+    @media phoneRule
+        height: 65vh
+        padding-top: 0
+        padding-bottom: 0
+    @media ttrigger
+       max-height: 1100px
+
+
+div.item.halfH div.itemContent
+    height: halfH
+    @media phoneRule
+        height: auto
+        padding-top: padXL*2
+        padding-bottom: padXL
+    @media ttrigger
+       max-height: 450px
+
+div.slickSlider.halfH div.item div.itemContent
+    height: halfH
+    @media phoneRule
+        height: 75vh
+        padding-top: 0
+        padding-bottom: 0
+    @media ttrigger
+       max-height: 450px
+
+
+
+
+
+div.item div.itemContent div:last-of-type
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-wrap: nowrap
+    height: 100%
+    width:100%
+    @media phoneRule
+        //align-items: flex-end
+    @media ttrigger
+        justify-content: flex-start
+
+div.item div.itemContent.overrideLeft div:last-of-type
+    @media ttrigger
+        justify-content: center !important
+
+div.item div.itemContent section
+        text-align: center   
+        display: flex
+        flex-direction: column
+        padding-left: padL
+        padding-right: padL
+        @media phoneRule
+            justify-content: flex-start
+            padding-left: padXL
+            padding-right: padXL
+            min-height: 30vh
+        @media ttrigger
+            flex: 0 1 42%
+
+div.item div.itemContent section.left
+    text-align: left
+
+.wCaption div.item div.itemContent section
+    align-self: flex-end
+    flex: 0 1 auto
+    background-color: white
+    padding-left: padStd*1.5
+    padding-right: padStd*1.5
+    padding-top: 0.8em
+    text-align: left
+    @media phoneRule
+        min-height: 1px
+        padding-left: padL
+        padding-right: padL
+        align-self: flex-start
+
+.wCaption div.item div.itemContent div:last-of-type
+    @media phoneRule
+        justify-content: flex-start
+
+
+div.item div.itemContent.picturefill-background
+    @media ttrigger
+        background-size: contain !important
+
+div.item div.itemContent.picturefill-background.right
+    @media ttrigger
+        background-position: 100% 50% !important
+
+
+/* quote feature */
+p.fadeText span
+    display: block
+    background: linear-gradient(to bottom, brand0, transparent)
+    color: transparent
+    -webkit-background-clip: text
+    background-clip: text
+
+a.openText
+    color: brand3
+    font-weight: 500
+    display: block
+    text-align: center
+    margin: 1em auto
+
+div.revealText
+    display: none
+
+
+/* selections */
+.selections select option
+    font-family: fontStack
+.selections select
+    @media phoneRule
+        width: 90%
+.selections textarea
+    font-family: fontStack
+    font-size: 1.2em
+    padding: padXS
+    width: 50vw
+    max-width: 700px
+    @media phoneRule
+        width: 100% - padXL
+
+.selections input.form-control
+.selections input[type=file]
+.selections.submit input.form-control
+    width: 90%
+    margin: 5px 
+    @media phoneRule
+        width: 100% - padXL
+
+.selections.submit fieldset
+    margin-bottom: 1em
+    border: 0
+    padding: 0
+    @media phoneRule
+        margin-bottom: 0
+    @media dtrigger
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        column-gap: 2vw
+
+.selections.submit fieldset > div
+    flex: 0 0 45%
+    margin-bottom: 1em
+
+.selections ul.vanilla 
+    margin-bottom: 2em
+    @media phoneRule
+        margin-top: marM
+        margin-bottom: marXL
+.selections ul.vanilla li
+    @media phoneRule
+        margin-bottom: marM
+        display: flex
+        column-gap: 3vw
+        align-items: center
+        font-size: 1em
+.selections ul.vanilla:first-of-type li:last-child
+        flex-wrap: wrap
+.selections ul.vanilla:first-of-type input.form-control
+    @media phoneRule
+        width: 85%
+        margin-top: 0.5em
+        margin-left: 1.5em
+.sendRequest
+    transition: 0.3s
+
+.sendRequest:hover
+    background-color: brand0 !important
+
+
+.selections input.cta   
+    @media phoneRule
+        width: 100%
+        padding: 1em
+        margin-bottom: 1em
+        text-align: left
+        display: block
+
+
+
+.small
+    font-size: 75%
+    text-transform: uppercase !important

@@ -1,0 +1,86 @@
+/*!
+* generated using stylus - don't alter
+
+TEST COMPILE
+
+
+*/
+
+// libs and default 3rd party
+@import 'nib'
+// @import '../css/normalize.css'
+// setup
+@import '../fonts/satoshi/satoshiCustom.css'
+@require 'defaults.styl'
+// block, elements
+@require 'forms.styl'
+@require 'layout.styl'
+// typography, links, icons
+@require 'typo.styl'
+// custom elements
+@require 'elements.styl'
+// 2024
+@require '2024.styl'
+
+
+
+// custom modifiers & effects 
+.content hr 
+    border-bottom: 2px solid brand1
+
+/* effects */
+.overlay
+    background-blend-mode: overlay
+.multiply
+    background-blend-mode: multiply
+    /*background-color: blackAlp25*/
+.multiply0
+    background-color: blackAlp10
+.multiply1
+    background-color: blackAlp25
+.multiply11
+    background-color: blackAlp50    
+.multiply2
+    background-color: blackAlp75
+.multiply3
+    background-color: brand3Alp
+.multiply4
+    background-color: brand3edit
+.multiply5
+    background-color: brand1edit
+.multiply6
+    background-color: brand3edit1    
+.lighten1
+    background-color: rgba(255,255,255,0.75)
+    background-blend-mode: overlay
+    filter:grayscale(100%)
+.lighten2
+    background-color: rgba(255,255,255,0.85)
+    background-blend-mode: overlay
+    filter:grayscale(80%)
+.gradient1
+    background-blend-mode: multiply
+    background: linear-gradient(to top right, brand3, blackAlp50, blackAlp25, blackAlp10)
+.gradient2
+    background-blend-mode: multiply
+    background: linear-gradient(to top right, brand1, blackAlp25, blackAlp10)    
+
+
+
+
+
+
+
+
+
+
+
+
+// last in the cascade - highest prio
+.m
+    @media screen and (min-width: mBreakPoint)
+        display: $hideItAll
+.d
+    @media screen and (max-width: mBreakPoint)
+        display: $hideItAll
+
