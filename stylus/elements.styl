@@ -8,32 +8,20 @@ div.logo
     justify-content: flex-start
     align-items: center
     overflow: hidden
-    width: logoDimens
+    column-gap: 15px
+    
 
-div.logo svg
+div.logo img
     display: block
-    width: 100%
-    height: auto
-    @media ie
-        width:55px
-        height:50px
+    height: 35px
+    width: auto
+    
+.deskLogo
+    height: 42px
+.deskLogoLarge
+    height: 60px
+    margin-left: 1em
 
-#mNav div.logo 
-    @media phoneRule
-        width: logoDimens*0.8
-    @media tabletRule
-        width: logoDimens
-#mNav div.logo svg
-    max-height: navSpacer*0.9
-#cNav div.logo
-    margin-bottom: 10px
-    @media desktopRule
-        margin-top: marXXS
-    @media lgdesktopRule
-        margin-top: marXXS
-     @media ie
-        height:50px
-        width:55px
 
 //cta buttons
 .cta
@@ -72,27 +60,29 @@ a.cta:hover::after
     font-size: 1.1em
     letter-spacing: 0 
     display: inline-block
-    background-color: blackAlp5
-    border-radius: 5px
-    transition: 0.3s
-    padding: padXS padXS 0 padXS !important 
-    border-bottom: 3px solid rgba(0,0,0,0.0) 
+    background-color: white
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1)
+    border-radius: 20px
+    //transition: 0.3s
+    padding: 15px 20px 15px 20px !important 
+    @media phoneRule
+        padding: padM padL padM padL !important 
+.ctaButton.ctaShop, 
+a.ctaButton.ctaShop
+    color: brand3
+    background-color: brand2
 .ctaButton:hover, a.ctaButton:hover
     //display: block
-    border-radius: 0
-    background-color: rgba(0,0,0,0.0) !important
+    color: brand2
+    background-color: brand3
 
-.ctaButton:link::after, 
-.ctaButton:visited::after 
-    content: ""
-    display: block
-    width: 0
-    border-bottom: 3px solid brand1
-    transition: width 0.3s
-    padding: 0 0 padXS*0.7 0
+
 
 .ctaButton:hover::after
     width: 100%
+
+.ctaButton > *
+    line-height: 1.4em
 
 .ctaBtn 
     display: inline-block
@@ -190,12 +180,7 @@ li:last-child
 nav ul, nav li
     border:none
     padding:0
-nav ul
-    display: flex
-    justify-content: space-between
-    {marginNo}
-nav li 
-    padding: 0 padXS*1.2
+
 footer nav ul
     flex-direction: column
     //{marginT}
@@ -294,3 +279,11 @@ a.thumbLink > h5
 .fslightbox-slash
     background: blackAlp50 !important
 
+
+
+
+div.mobileCart
+    position: fixed
+    left: 1.5em
+    bottom: 2em
+    z-index: 10000

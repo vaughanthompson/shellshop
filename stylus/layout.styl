@@ -5,20 +5,11 @@ body > main > header,
 body > main > article
     //padding: 0 padXL padM padXL
     @media dtrigger
-        padding: padM padL*1.5 padM padL*1.5
-    @media ie
-        display: block
+        padding: padM padXL padM padXL
     
+main 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1)
 
-main > *:nth-child(1)
-    background-color: brand4
-    @media dtrigger
-        padding: padM padL*1.5 padL padL*1.5
-
-main > *:nth-child(2)
-    background-color: brand4
-    @media dtrigger
-        padding: padM padL*1.5 padL padL*1.5
 
 body > main > article:last-of-type
   @media dtrigger
@@ -35,59 +26,18 @@ body > main > article:last-of-type
 
 // footer
 body > footer
-    border-top: 1px solid white
-    padding: padXL 7vw
     @media phoneRule
         margin-top: marXL
     @media dtrigger
         padding: padM padL*1.5
 
-body > footer 
-    background-color: brand4
-body > footer div.content
-    @media tabletRule
-        flex-wrap: wrap
-body > footer div.content > section
-    @media phoneRule
-        margin-bottom: marXL
-    @media tabletRule
-        flex:0 1 auto
-        flex-basis: 40%
-body > footer div.content > section:last-child
-     @media tabletRule
-        flex-basis: 100%
-// custom footer    
-body > footer div.content
-    @media dtrigger
-        column-gap: marM
-        justify-content: flex-start
-body > footer div.content > section
-    @media dtrigger
-        flex:1 1 20%
-        //padding-right: 3%
-body > footer div.content > section:last-child
-    @media dtrigger
-        margin-left: auto
-footer div > header
-        padding-bottom: padM    
 
 
-// z-indexes for main content
-/*
-main > * 
-    position: relative
-    z-index: 1000
-main > * > div
-    z-index: 2000
-main > * > div > div
-    z-index: 3000
-main > * > div > div > div
-    z-index: 4000
-*/    
+
+
 main > * > div > div > div > div.control
     z-index: 5000
-div#cNav
-    z-index: 9000
+
 a#toTop
     z-index: 10000    
 div.mblnav
@@ -119,23 +69,29 @@ div.content.rowAlignCentre
     @media ttrigger
         align-items: center
 div.content > section
+    padding: padM
+    {test}
+    @media tabletRule 
+        padding: padXS padStd padXS padStd
     @media ttrigger
         flex: 1 1 auto 
         flex-basis: 50%
+        
 main > *:not(.grid) div.content
     @media tabletRule
         flex-wrap: wrap
 main div > header,
-footer header,
-footer section
+footer header
     padding: padM
+    {test}
     @media tabletRule 
         padding: padXS padStd padXS padStd
+        
 main > *:not(.grid) div.content > section,
 main > *:not(.grid) div.contentNoFlex > section
     padding: padXS padM padXS padM
     @media phoneRule
-        padding: padXL padXL 0 padXL
+        padding: padL padL 0 padL
     @media tabletRule 
         flex: 0 1 auto 
         flex-basis: 46%
@@ -426,7 +382,7 @@ main > .grid.fancy div.content > section > a
 
 // inset body copy control
 
-main > .copy div.content > section
+.copy div.content > section
     max-width: 90%
     flex-basis: 90%
     @media phoneRule
@@ -437,17 +393,17 @@ main > .copy div.content > section
     @media dtrigger
         padding-left: 22vw
         padding-right: 22vw
+        
 
-
-//main > .copy div.content > section,
-main > .copyMulti div.content > section
+.copyMulti div.content > section
     @media dtrigger
         padding: padXS padM padXS padM 
-main > .copyMulti div.content > section:first-of-type
+        
+.copyMulti div.content > section:first-of-type
     @media dtrigger
         padding-left: 0 
         margin-left: padL 
-main > .copyMulti div.content > section:last-of-type
+.copyMulti div.content > section:last-of-type
     @media dtrigger
         padding-right: padL
 
@@ -539,7 +495,8 @@ div.selections div.content.selectionsHeader
     @media phLandscape
         height: navSpacerL
 #mNav
-    background-color: brand4
+    background-color: white
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1)
     height: navSpacer
     width: 100vw
     position fixed
@@ -553,8 +510,9 @@ div.selections div.content.selectionsHeader
         height: navSpacerL
 #cNav,
 #dNav
-    padding: padXXS padM
-    background-color: brand4
+    padding: 20px padStd
+    background-color: white
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1)
 #mNav nav,
 #cNav nav,
 #dNav nav
@@ -563,7 +521,7 @@ div.selections div.content.selectionsHeader
     align-items: flex-end
     flex: 1 1 auto
 #mNav nav
-    padding: 0 padL
+    padding: 0 padL 0 padM
     align-items: center
     @media phLandscape
         padding: 0 padM
@@ -576,10 +534,31 @@ div.selections div.content.selectionsHeader
 #dNav nav
     // border-bottom: 2px solid brand1   
 #cNav nav
-    padding: padStd
+    padding: 0 padStd
     align-items: center
 #dNav nav
     padding: padStd
+
+nav div
+    display: flex
+    justify-content: space-between
+    align-items: center
+    column-gap: 1em
+nav div:last-child
+    align-items: center
+    column-gap: 1.5em
+nav div > *
+    padding: 0
+    margin: 0
+nav div.tagline
+    display: flex
+    justify-content: flex-start
+    align-items: baseline
+    column-gap: 2em
+    padding-bottom: 5px
+
+
+
 @media mtrigger
     div#dNav,
     div#cNav
@@ -601,7 +580,7 @@ div.mblnav
     left: 0
     width: 100%
     height: 100%
-    background-color: brand4
+    background-color: white
 div.mblnavContainer
     position: absolute
     top: 0
@@ -710,6 +689,3 @@ main > * > div.imageBlocks section > a.cta
     align-items: center
 
 
-
-@media ie
-    //target IE (not edge)

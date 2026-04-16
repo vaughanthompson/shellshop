@@ -21,14 +21,41 @@ ul a:link, ul a:visited
     padding: padXS 0 0 0
     letter-spacing: 0 
     display: inline-block
-    {test}
 nav a:link
     font-weight: 600
 nav a:link.activeLink, nav a:visited.activeLink
     padding-bottom: padXS*0.7
     color: brand3
     border-bottom: 3px solid brand3
-    
+
+.mblnavSection a:not(.ctaButton) 
+    display: block
+    font-weight: bold
+    line-height: 1.4em
+    margin-bottom: 7px
+    padding-bottom: 5px
+    text-decoration: none
+    border-bottom: 1px solid brand3
+    color: brand2 !important
+
+a.cart
+    @media phoneRule
+        display: none !important
+
+
+#cNav a 
+    padding: 0
+#cNav h3
+    color: brand2
+    font-weight: 800
+    font-size: 1.9em
+#cNav h6
+    font-size: 1em
+    font-weight: 500
+    @media medDesktop
+        display: none
+
+
 footer nav li 
     margin-bottom: 0.5em
 footer nav a:link.activeLink

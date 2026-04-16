@@ -1,10 +1,3 @@
-/*
-* generated using stylus - don't alter
-
-TEST COMPILE
-
-
-*/
 /**
 * @license
 *
@@ -78,16 +71,16 @@ TEST COMPILE
 *
 */
 .brand0color {
-  color: #1a1a1a;
-}
-.brand1color {
-  color: #1a1a1a;
-}
-.brand2color {
   color: #000;
 }
+.brand1color {
+  color: #000;
+}
+.brand2color {
+  color: #e42313;
+}
 .brand3color {
-  color: #f00;
+  color: #ffd300;
 }
 .brand4color {
   color: #ebeae8;
@@ -111,16 +104,16 @@ TEST COMPILE
   color: #514d4c;
 }
 .brand0bg {
-  background-color: #1a1a1a;
-}
-.brand1bg {
-  background-color: #1a1a1a;
-}
-.brand2bg {
   background-color: #000;
 }
+.brand1bg {
+  background-color: #000;
+}
+.brand2bg {
+  background-color: #e42313;
+}
 .brand3bg {
-  background-color: #f00;
+  background-color: #ffd300;
 }
 .brand4bg {
   background-color: #ebeae8;
@@ -154,7 +147,7 @@ body {
 }
 body {
   background-color: #fff;
-  color: #1a1a1a;
+  color: #000;
 }
 hr {
   border: none;
@@ -165,18 +158,18 @@ hr.thick {
   border-bottom: 3px solid #dedede !important;
 }
 hr.thick.active {
-  border-bottom-color: #1a1a1a;
+  border-bottom-color: #000;
 }
 img {
   width: 100%;
   height: auto;
 }
 hr.small {
-  border-bottom: 3px solid #000 !important;
+  border-bottom: 3px solid #e42313 !important;
   width: 100px;
 }
 .reverse hr {
-  border-bottom: 2px solid #1a1a1a;
+  border-bottom: 2px solid #000;
 }
 .noPad {
   padding: 0 !important;
@@ -275,7 +268,7 @@ span.spacer25 {
 */
 input {
   border-radius: 5px;
-  border-color: #1a1a1a;
+  border-color: #000;
 }
 /* 
 * layout 
@@ -283,30 +276,12 @@ input {
 @media screen and (min-width: 1100px) {
   body > main > header,
   body > main > article {
-    padding: 3vw 7.5vw 3vw 7.5vw;
+    padding: 3vw 10vw 3vw 10vw;
   }
 }
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  body > main > header,
-  body > main > article {
-    display: block;
-  }
-}
-main > *:nth-child(1) {
-  background-color: #ebeae8;
-}
-@media screen and (min-width: 1100px) {
-  main > *:nth-child(1) {
-    padding: 3vw 7.5vw 5vw 7.5vw;
-  }
-}
-main > *:nth-child(2) {
-  background-color: #ebeae8;
-}
-@media screen and (min-width: 1100px) {
-  main > *:nth-child(2) {
-    padding: 3vw 7.5vw 5vw 7.5vw;
-  }
+main {
+  -webkit-box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 @media screen and (min-width: 1100px) {
   body > main > article:last-of-type {
@@ -323,10 +298,6 @@ main > *:nth-child(2) {
     margin-right: auto !important;
   }
 }
-body > footer {
-  border-top: 1px solid #fff;
-  padding: 10vw 7vw;
-}
 @media screen and (max-width: 750px) {
   body > footer {
     margin-top: 10vw;
@@ -337,73 +308,8 @@ body > footer {
     padding: 3vw 7.5vw;
   }
 }
-body > footer {
-  background-color: #ebeae8;
-}
-@media screen and (min-width: 750px) and (max-width: 1100px) {
-  body > footer div.content {
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    -o-box-lines: multiple;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-}
-@media screen and (max-width: 750px) {
-  body > footer div.content > section {
-    margin-bottom: 10vw;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 1100px) {
-  body > footer div.content > section {
-    -webkit-box-flex: 1;
-    -o-box-flex: 1;
-    box-flex: 1;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 1100px) {
-  body > footer div.content > section:last-child {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-}
-@media screen and (min-width: 1100px) {
-  body > footer div.content {
-    -webkit-column-gap: 3vw;
-    -moz-column-gap: 3vw;
-    column-gap: 3vw;
-    -webkit-box-pack: start;
-    -o-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-@media screen and (min-width: 1100px) {
-  body > footer div.content > section {
-    -webkit-box-flex: 1;
-    -o-box-flex: 1;
-    box-flex: 1;
-    -ms-flex: 1 1 20%;
-    flex: 1 1 20%;
-  }
-}
-@media screen and (min-width: 1100px) {
-  body > footer div.content > section:last-child {
-    margin-left: auto;
-  }
-}
-footer div > header {
-  padding-bottom: 3vw;
-}
 main > * > div > div > div > div.control {
   z-index: 5000;
-}
-div#cNav {
-  z-index: 9000;
 }
 a#toTop {
   z-index: 10000;
@@ -453,6 +359,15 @@ div.content {
     align-items: center;
   }
 }
+div.content > section {
+  padding: 3vw;
+  border: 1px solid #f00;
+}
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+  div.content > section {
+    padding: 0.9vw 1.5vw 0.9vw 1.5vw;
+  }
+}
 @media screen and (min-width: 750px) {
   div.content > section {
     -webkit-box-flex: 1;
@@ -474,14 +389,13 @@ div.content {
   }
 }
 main div > header,
-footer header,
-footer section {
+footer header {
   padding: 3vw;
+  border: 1px solid #f00;
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
   main div > header,
-  footer header,
-  footer section {
+  footer header {
     padding: 0.9vw 1.5vw 0.9vw 1.5vw;
   }
 }
@@ -492,7 +406,7 @@ main > *:not(.grid) div.contentNoFlex > section {
 @media screen and (max-width: 750px) {
   main > *:not(.grid) div.content > section,
   main > *:not(.grid) div.contentNoFlex > section {
-    padding: 10vw 10vw 0 10vw;
+    padding: 5vw 5vw 0 5vw;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
@@ -985,41 +899,41 @@ main > .grid.fancy div.content > section > a {
     width: 80%;
   }
 }
-main > .copy div.content > section {
+.copy div.content > section {
   max-width: 90%;
   -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
 }
 @media screen and (max-width: 750px) {
-  main > .copy div.content > section {
+  .copy div.content > section {
     padding: 10vw;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
-  main > .copy div.content > section {
+  .copy div.content > section {
     padding-left: 10vw;
     padding-right: 10vw;
   }
 }
 @media screen and (min-width: 1100px) {
-  main > .copy div.content > section {
+  .copy div.content > section {
     padding-left: 22vw;
     padding-right: 22vw;
   }
 }
 @media screen and (min-width: 1100px) {
-  main > .copyMulti div.content > section {
+  .copyMulti div.content > section {
     padding: 0.9vw 3vw 0.9vw 3vw;
   }
 }
 @media screen and (min-width: 1100px) {
-  main > .copyMulti div.content > section:first-of-type {
+  .copyMulti div.content > section:first-of-type {
     padding-left: 0;
     margin-left: 5vw;
   }
 }
 @media screen and (min-width: 1100px) {
-  main > .copyMulti div.content > section:last-of-type {
+  .copyMulti div.content > section:last-of-type {
     padding-right: 5vw;
   }
 }
@@ -1108,7 +1022,7 @@ div.selections div.selectionsHeader section:first-of-type {
   border-bottom: none;
 }
 div.selections.inactive div.selectionsHeader section {
-  border-bottom-color: #1a1a1a;
+  border-bottom-color: #000;
 }
 div.selections.inactive div.selectionsHeader {
   opacity: 0.1;
@@ -1125,7 +1039,7 @@ div.selections div.content.selectionsHeader {
   padding: 0.9vw 0.9vw 0 0.9vw;
 }
 #alert div.content {
-  border-bottom: 4px solid #1a1a1a;
+  border-bottom: 4px solid #000;
 }
 @media screen and (max-width: 1100px) {
   #alert div.content {
@@ -1149,7 +1063,7 @@ div.selections div.content.selectionsHeader {
   text-align: center;
 }
 #navSpacer {
-  height: 10vh;
+  height: 8vh;
   width: 100vw;
   background-color: #fff;
 }
@@ -1159,8 +1073,10 @@ div.selections div.content.selectionsHeader {
   }
 }
 #mNav {
-  background-color: #ebeae8;
-  height: 10vh;
+  background-color: #fff;
+  -webkit-box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+  height: 8vh;
   width: 100vw;
   position: fixed;
   padding: 0 !important;
@@ -1186,8 +1102,10 @@ div.selections div.content.selectionsHeader {
 }
 #cNav,
 #dNav {
-  padding: 0.3vw 3vw;
-  background-color: #ebeae8;
+  padding: 20px 1.5vw;
+  background-color: #fff;
+  -webkit-box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 #mNav nav,
 #cNav nav,
@@ -1211,7 +1129,7 @@ div.selections div.content.selectionsHeader {
   flex: 1 1 auto;
 }
 #mNav nav {
-  padding: 0 5vw;
+  padding: 0 5vw 0 3vw;
   -webkit-box-align: center;
   -o-box-align: center;
   -ms-flex-align: center;
@@ -1230,7 +1148,7 @@ div.selections div.content.selectionsHeader {
   margin-left: 15px;
 }
 #cNav nav {
-  padding: 1.5vw;
+  padding: 0 1.5vw;
   -webkit-box-align: center;
   -o-box-align: center;
   -ms-flex-align: center;
@@ -1238,6 +1156,54 @@ div.selections div.content.selectionsHeader {
 }
 #dNav nav {
   padding: 1.5vw;
+}
+nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+}
+nav div:last-child {
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em;
+}
+nav div > * {
+  padding: 0;
+  margin: 0;
+}
+nav div.tagline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: baseline;
+  -o-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
+  padding-bottom: 5px;
 }
 @media screen and (max-width: 1100px) {
   div#dNav,
@@ -1252,7 +1218,7 @@ div.selections div.content.selectionsHeader {
   }
 }
 div.navSpace {
-  height: 10vh;
+  height: 8vh;
 }
 @media screen and (max-width: 750px) and (orientation: landscape) {
   div.navSpace {
@@ -1266,7 +1232,7 @@ div.mblnav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ebeae8;
+  background-color: #fff;
 }
 div.mblnavContainer {
   position: absolute;
@@ -1481,11 +1447,11 @@ a:link,
 .rev span,
 .mblnav a:link,
 .mblnav a:visited {
-  color: #1a1a1a;
+  color: #000;
 }
 a:visited,
 .rev a:visited {
-  color: #1a1a1a;
+  color: #000;
 }
 a:hover,
 a:active {
@@ -1493,12 +1459,11 @@ a:active {
 }
 ul a:link,
 ul a:visited {
-  color: #1a1a1a;
+  color: #000;
   text-decoration: none;
   padding: 0.9vw 0 0 0;
   letter-spacing: 0;
   display: inline-block;
-  border: 1px solid #f00;
 }
 nav a:link {
   font-weight: 600;
@@ -1506,8 +1471,40 @@ nav a:link {
 nav a:link.activeLink,
 nav a:visited.activeLink {
   padding-bottom: 0.63vw;
-  color: #f00;
-  border-bottom: 3px solid #f00;
+  color: #ffd300;
+  border-bottom: 3px solid #ffd300;
+}
+.mblnavSection a:not(.ctaButton) {
+  display: block;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin-bottom: 7px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  border-bottom: 1px solid #ffd300;
+  color: #e42313 !important;
+}
+@media screen and (max-width: 750px) {
+  a.cart {
+    display: none !important;
+  }
+}
+#cNav a {
+  padding: 0;
+}
+#cNav h3 {
+  color: #e42313;
+  font-weight: 800;
+  font-size: 1.9em;
+}
+#cNav h6 {
+  font-size: 1em;
+  font-weight: 500;
+}
+@media screen and (min-width: 750px) and (max-width: 1500px) {
+  #cNav h6 {
+    display: none;
+  }
 }
 footer nav li {
   margin-bottom: 0.5em;
@@ -1519,7 +1516,7 @@ p,
 li,
 a,
 td {
-  color: #1a1a1a;
+  color: #000;
   line-height: 125%;
 }
 h1,
@@ -1661,50 +1658,21 @@ div.logo {
   -ms-flex-align: center;
   align-items: center;
   overflow: hidden;
-  width: 60px;
+  -webkit-column-gap: 15px;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
 }
-div.logo svg {
+div.logo img {
   display: block;
-  width: 100%;
-  height: auto;
+  height: 35px;
+  width: auto;
 }
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  div.logo svg {
-    width: 55px;
-    height: 50px;
-  }
+.deskLogo {
+  height: 42px;
 }
-@media screen and (max-width: 750px) {
-  #mNav div.logo {
-    width: 48px;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 1100px) {
-  #mNav div.logo {
-    width: 60px;
-  }
-}
-#mNav div.logo svg {
-  max-height: 9vh;
-}
-#cNav div.logo {
-  margin-bottom: 10px;
-}
-@media screen and (min-width: 1100px) and (max-width: 2100px) {
-  #cNav div.logo {
-    margin-top: 0.3vw;
-  }
-}
-@media screen and (min-width: 2100px) {
-  #cNav div.logo {
-    margin-top: 0.3vw;
-  }
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  #cNav div.logo {
-    height: 50px;
-    width: 55px;
-  }
+.deskLogoLarge {
+  height: 60px;
+  margin-left: 1em;
 }
 .cta {
   display: inline-block;
@@ -1712,18 +1680,18 @@ div.logo svg {
   margin: 0.9vw 0;
   font-weight: 700 !important;
   background-color: #fff;
-  color: #1a1a1a;
+  color: #000;
   position: relative;
 }
 a.cta:link,
 a.cta:visited {
-  color: #1a1a1a;
+  color: #000;
   text-decoration: none;
 }
 a.cta:hover,
 a.cta:active {
   color: #fff;
-  background-color: #f00;
+  background-color: #ffd300;
 }
 a.cta:hover::after {
   content: '>';
@@ -1733,49 +1701,52 @@ a.cta:hover::after {
 }
 .rev .cta {
   background-color: rgba(255,255,255,0.5);
-  color: #1a1a1a;
+  color: #000;
 }
 .rev a.cta:link,
 .rev a.cta:visited {
-  color: #1a1a1a;
+  color: #000;
 }
 .rev a.cta:hover,
 .rev a.cta:active {
   color: #fff;
-  background-color: #f00;
+  background-color: #ffd300;
 }
 .ctaButton,
 a.ctaButton {
-  color: #1a1a1a;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1em;
   letter-spacing: 0;
   display: inline-block;
-  background-color: rgba(0,0,0,0.05);
-  border-radius: 5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  padding: 0.9vw 0.9vw 0 0.9vw !important;
-  border-bottom: 3px solid rgba(0,0,0,0);
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  padding: 15px 20px 15px 20px !important;
+}
+@media screen and (max-width: 750px) {
+  .ctaButton,
+  a.ctaButton {
+    padding: 3vw 5vw 3vw 5vw !important;
+  }
+}
+.ctaButton.ctaShop,
+a.ctaButton.ctaShop {
+  color: #ffd300;
+  background-color: #e42313;
 }
 .ctaButton:hover,
 a.ctaButton:hover {
-  border-radius: 0;
-  background-color: rgba(0,0,0,0) !important;
-}
-.ctaButton:link::after,
-.ctaButton:visited::after {
-  content: "";
-  display: block;
-  width: 0;
-  border-bottom: 3px solid #1a1a1a;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  padding: 0 0 0.63vw 0;
+  color: #e42313;
+  background-color: #ffd300;
 }
 .ctaButton:hover::after {
   width: 100%;
+}
+.ctaButton > * {
+  line-height: 1.4em;
 }
 .ctaBtn {
   display: inline-block;
@@ -1853,7 +1824,7 @@ video.hidden-xs {
 }
 ul,
 ol {
-  border-bottom: 3px solid #1a1a1a;
+  border-bottom: 3px solid #000;
   border-top: 1px solid rgba(0,0,0,0.1);
   padding: 0;
   margin: 1em 0;
@@ -1878,20 +1849,6 @@ nav ul,
 nav li {
   border: none;
   padding: 0;
-}
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0;
-}
-nav li {
-  padding: 0 1.08vw;
 }
 footer nav ul {
   -webkit-box-orient: vertical;
@@ -2000,6 +1957,12 @@ a.thumbLink > h5 {
 }
 .fslightbox-slash {
   background: rgba(0,0,0,0.5) !important;
+}
+div.mobileCart {
+  position: fixed;
+  left: 1.5em;
+  bottom: 2em;
+  z-index: 10000;
 }
 @media screen and (min-width: 750px) {
   .hidebgDesk {
@@ -2264,14 +2227,14 @@ div.item div.itemContent section.left {
 }
 p.fadeText span {
   display: block;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1a1a1a), to(transparent));
-  background: linear-gradient(to bottom, #1a1a1a, transparent);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(transparent));
+  background: linear-gradient(to bottom, #000, transparent);
   color: transparent;
   -webkit-background-clip: text;
   -webkit-background-clip: text;
 }
 a.openText {
-  color: #f00;
+  color: #ffd300;
   font-weight: 500;
   display: block;
   text-align: center;
@@ -2396,7 +2359,7 @@ div.revealText {
   transition: 0.3s;
 }
 .sendRequest:hover {
-  background-color: #1a1a1a !important;
+  background-color: #000 !important;
 }
 @media screen and (max-width: 750px) {
   .selections input.cta {
@@ -2412,7 +2375,7 @@ div.revealText {
   text-transform: uppercase !important;
 }
 .content hr {
-  border-bottom: 2px solid #1a1a1a;
+  border-bottom: 2px solid #000;
 }
 /* effects */
 .overlay {
@@ -2460,13 +2423,13 @@ div.revealText {
 }
 .gradient1 {
   background-blend-mode: multiply;
-  background: -webkit-gradient(linear, left bottom, right top, from(#f00), color-stop(rgba(0,0,0,0.5)), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
-  background: linear-gradient(to top right, #f00, rgba(0,0,0,0.5), rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  background: -webkit-gradient(linear, left bottom, right top, from(#ffd300), color-stop(rgba(0,0,0,0.5)), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
+  background: linear-gradient(to top right, #ffd300, rgba(0,0,0,0.5), rgba(0,0,0,0.25), rgba(0,0,0,0.1));
 }
 .gradient2 {
   background-blend-mode: multiply;
-  background: -webkit-gradient(linear, left bottom, right top, from(#1a1a1a), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
-  background: linear-gradient(to top right, #1a1a1a, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  background: -webkit-gradient(linear, left bottom, right top, from(#000), color-stop(rgba(0,0,0,0.25)), to(rgba(0,0,0,0.1)));
+  background: linear-gradient(to top right, #000, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
 }
 @media screen and (min-width: 750px) {
   .m {
