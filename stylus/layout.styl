@@ -4,12 +4,14 @@
 body > main > header,
 body > main > article,
 footer > article
-    //padding: 0 padXL padM padXL
+    padding: 0 padL 0 padL
     @media dtrigger
         padding: padM padXL padM padXL
     
 main 
     box-shadow: 0 20px 40px rgba(0,0,0,0.1)
+    @media phoneRule
+        padding-top: padXL
 
 
 body > main > article:last-of-type

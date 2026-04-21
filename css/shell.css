@@ -970,6 +970,11 @@ fieldset input[type=password]::placeholder {
 /* 
 * layout 
 */
+body > main > header,
+body > main > article,
+footer > article {
+  padding: 0 5vw 0 5vw;
+}
 @media screen and (min-width: 1100px) {
   body > main > header,
   body > main > article,
@@ -980,6 +985,11 @@ fieldset input[type=password]::placeholder {
 main {
   -webkit-box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+@media screen and (max-width: 750px) {
+  main {
+    padding-top: 10vw;
+  }
 }
 @media screen and (min-width: 1100px) {
   body > main > article:last-of-type {
