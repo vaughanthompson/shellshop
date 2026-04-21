@@ -2383,7 +2383,6 @@ h1,
   h1,
   .h1 {
     font-size: 11vw;
-    margin-bottom: 10vw;
   }
 }
 h2,
@@ -2397,7 +2396,6 @@ h2,
   h2,
   .h2 {
     font-size: 8vw;
-    margin-bottom: 5vw;
   }
 }
 h3,
@@ -2834,16 +2832,12 @@ div.mobileCart {
   bottom: 2em;
   z-index: 10000;
 }
-.imageryOnly {
-  width: 40vw;
-}
-.imageryOnly div.item > div {
+.imagerySlider div.item > div {
   height: 50vh;
+  border-left: 20px solid #e42313;
 }
-@media screen and (min-width: 2100px) {
-  .imageryOnly div.item > div {
-    height: 30vh;
-  }
+.imagerySlider div.item {
+  border-left: 10px solid #ffd300;
 }
 div.bannerInPage {
   padding: 1.875vw 3vw;
@@ -2851,6 +2845,12 @@ div.bannerInPage {
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
   border: 1px solid #fff;
+}
+@media screen and (max-width: 750px) {
+  div.bannerInPage {
+    padding: 10vw 3vw;
+    margin-bottom: 1.5em;
+  }
 }
 div.bannerInPage a {
   text-decoration: none;

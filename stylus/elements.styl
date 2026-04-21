@@ -307,13 +307,14 @@ div.mobileCart
 
 
 /* basic slider */
-.imageryOnly
-    width:40vw
-.imageryOnly div.item > div
+.imagerySlider div.item > div
     height: 50vh
+    border-left:20px solid brand2
+.imagerySlider div.item
+    border-left:10px solid brand3
 @media lgdesktopRule
     .imageryOnly div.item > div
-        height: 30vh
+        //height: 30vh
 
 
 
@@ -325,5 +326,8 @@ div.bannerInPage
     text-align: center
     box-shadow: 0px 10px 20px 0px blackAlp20
     border: 1px solid white
+    @media phoneRule
+        padding: padXL padM
+        margin-bottom: 1.5em
 div.bannerInPage a
     text-decoration: none
