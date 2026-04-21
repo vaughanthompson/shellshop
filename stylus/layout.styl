@@ -6,7 +6,7 @@ body > main > article,
 footer > article
     padding: 0 padL 0 padL
     @media dtrigger
-        padding: padM padXL padM padXL
+        padding: 0 padXL padM padXL
     
 main 
     box-shadow: 0 20px 40px rgba(0,0,0,0.1)
@@ -64,7 +64,7 @@ div.content
     flex-direction: column
     padding: 0
     @media ttrigger
-        padding: 2vw 0 0 0
+        padding: 0 0 0 0
         column-gap: 2vw
         flex-direction: row
         justify-content: space-between
@@ -566,6 +566,8 @@ nav.shopStrip
     padding: padStd
     padding-top: 2em
     margin-bottom: 0.4em
+    @media ttrigger
+        margin-bottom: 0.8em
     @media tabletRule
         display: none
     @media medDesktop
