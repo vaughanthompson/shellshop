@@ -55,13 +55,13 @@ a.cart
     @media medDesktop
         display: none
 
-
+/*
 footer nav li 
     margin-bottom: 0.5em
 footer nav a:link.activeLink
     margin-bottom: 1em
 // underline effect
-/*
+
 nav ul a:not(.activeLink):link::after , nav ul a:not(.activeLink):visited::after 
     content: ""
     display: block
@@ -82,21 +82,21 @@ p, li, a, td
 
 h1, h2, h3, h4 ,h5, h6
     margin: 0
-    margin-bottom: marXS
+    margin-bottom: marXXS
 
 // defaults   
 h1, .h1
     font-weight: 800
-    font-size: 4.7em
+    font-size: 3.4em
     line-height: 1em
-    letter-spacing: -0.03em
+    letter-spacing: -0.02em
     margin-bottom: 1.5vw
     @media phoneRule
         font-size: 11vw
         margin-bottom: 10vw
     
 h2, .h2
-    font-weight: 600
+    font-weight: 800
     font-size: 3em
     line-height: 1.05em
     letter-spacing: -0.02em 
@@ -105,33 +105,23 @@ h2, .h2
         margin-bottom: 5vw
         
 h3, .h3
-    font-weight: 600
-    font-size: 2.2em
-    line-height: 115%
+    font-weight: 800
+    font-size: 2.1em
+    line-height: 120%
     letter-spacing: -0.01em 
 h4, .h4
-    font-weight: 500
-    font-size: 1.6em
-    line-height: 130%
-    //letter-spacing: -0.01em
-h4 span
-    font-weight: 400    
+    font-weight: 800
+    font-size: 1.7em
+    line-height: 120%  
+    letter-spacing: -0.01em 
 h5, .h5
-    font-weight: 400
-    font-size: 1.2em
-    line-height: 125%
-    margin-bottom: 0
-    //max-width:90%
-    //letter-spacing: -0.02em
-h5 span
-    font-weight: 400
-    //letter-spacing: -0.01em      
+    font-weight: 800
+    font-size: 1.3em
+    line-height: 120%
 h6, .h6
-    font-weight: 500
-    font-size:1.2em
-    line-height: 130%
-    max-width:90%
-    //letter-spacing: -0.015em
+    font-weight: 400
+    font-size:1.1em
+    line-height: 120%
 p
     font-weight: 400
     font-size: 1.1em
@@ -147,7 +137,13 @@ strong
 
 // modify typo
 .small
-    font-size: 90% 
+    font-size: 60% 
+
+.light
+    font-weight: 400
+
+.balanceMe 
+    text-wrap: balance
 
 
 main .content ul a:link,  main .content ul a:visited
@@ -175,3 +171,13 @@ ul.vanilla
     margin-top: 0
 ul.vanilla li 
     padding:padXXS
+
+
+
+nav.shopStrip h4
+    margin: 0
+    font-weight: bold
+    padding-right: 5px
+
+nav.shopStrip a
+    white-space: nowrap

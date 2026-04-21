@@ -2,7 +2,8 @@
 * layout 
 */
 body > main > header,
-body > main > article
+body > main > article,
+footer > article
     //padding: 0 padXL padM padXL
     @media dtrigger
         padding: padM padXL padM padXL
@@ -70,9 +71,6 @@ div.content.rowAlignCentre
         align-items: center
 div.content > section
     padding: padM
-    {test}
-    @media tabletRule 
-        padding: padXS padStd padXS padStd
     @media ttrigger
         flex: 1 1 auto 
         flex-basis: 50%
@@ -83,10 +81,9 @@ main > *:not(.grid) div.content
 main div > header,
 footer header
     padding: padM
-    {test}
     @media tabletRule 
         padding: padXS padStd padXS padStd
-        
+/*        
 main > *:not(.grid) div.content > section,
 main > *:not(.grid) div.contentNoFlex > section
     padding: padXS padM padXS padM
@@ -177,7 +174,7 @@ main > .grid div.content > section > a
 main > .grid.links div.content > section:hover
     background-color: whiteAlp50
 
-
+*/
 
 
 
@@ -557,6 +554,22 @@ nav div.tagline
     column-gap: 2em
     padding-bottom: 5px
 
+nav.shopStrip
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    column-gap: 10px
+    row-gap: 10px
+    justify-content: center
+    padding: padStd
+    padding-top: 2em
+    @media tabletRule
+        display: none
+    @media medDesktop
+        padding-left: 15vw
+        padding-right: 15vw
+
+
 
 
 @media mtrigger
@@ -688,4 +701,242 @@ main > * > div.imageBlocks section > a.cta
     column-gap: 20px
     align-items: center
 
+.simpleFlex.flexSpaced 
+    column-gap: 50px
 
+.simpleFlex.centered 
+    justify-content: center
+
+
+
+
+// cat
+i.toggleIcon:before
+    font-family: 'icomoon'
+    content: '\e904'
+    font-size: 1em
+i.toggleIcon.upDown:before
+    font-family: 'icomoon'
+    content: '\e907'
+@media phoneRule
+    .toggleIcon
+    a.slideToggleTrigger
+        display: none
+    div.catGroup a.catItem,
+    div.catGroup div.catItem
+        display: block
+        padding: padXL
+        margin: marL marL marXL marL
+    .catItem h6
+        font-weight: 700
+    div.imageThumb
+        height: 40vw !important
+        margin-bottom: 5vh !important
+    div.landing div.imageThumb
+        max-width: 100vw  !important
+        height:60vw !important
+    div.catGroup
+        margin-bottom: marL
+
+
+.catItem a,
+.catItem:hover a h6
+    text-decoration: none !important
+.catItem:hover a h3
+    //text-decoration: none
+.catItem span.cta
+    display: flex
+    text-align: center
+    //column-gap: 10px
+    align-items: center
+    justify-content: center
+    width:100%
+    padding: 0
+    margin-top: marXS
+    margin-bottom: 0
+.catItem span.cta > *
+    margin-bottom: 0
+@media phoneRule
+    .catItem span.cta
+        padding-top: marL
+
+div.keyStats
+    margin-top: 0.5em
+div.keyStats p
+    font-weight: 400
+    margin: 0
+    max-width:80%
+div.keyStats span
+    text-transform: uppercase
+    font-size: 0.75em
+    letter-spacing: 0
+    font-weight:500
+    display: block
+    color: brand2
+
+div.imageThumb
+    height: 180px
+    //background-color: blackAlp5
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    margin-bottom: marStd
+
+@media ttrigger
+    div.catList div.catGroup
+        display: grid
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vw;
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr) )
+@media dtrigger
+    div.catList div.catGroup
+        display: grid
+        grid-column-gap: 1.5vw;
+        grid-row-gap: 2vw;
+        //grid-template-columns: repeat(3, \[col\] 20vw )
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr) )
+        grid-auto-flow: row dense
+        grid-auto-rows: min-content 
+    div.catList .catItem
+        flex-basis: 20%
+
+
+div.catGroup .catItem
+    border: 1px solid white
+    box-shadow: 0px 10px 30px 0px blackAlp20
+    padding: padM padStd padStd padStd
+    transition: 0.3s
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    position: relative
+    text-align: center
+@media dtrigger and (pointer: fine)
+    div.catGroup .catItem:hover
+        transform: translateY(-0.4em) 
+        box-shadow: 0px 10px 20px 0px blackAlp10
+div.catGroup .catItem > a
+    width: 100%
+
+
+/* offers and shop status styling */
+.offer,
+.offer > *
+    color: offer !important
+//.priceOffer h3,    
+.priceOffer div.keyStats *
+    color: offer !important
+.priceOffer
+    border: 2px solid offer !important
+.highlight
+    //border: 2px solid brand2 !important
+
+.otherOffer div.keyStats p span
+    color: gold !important
+.otherOffer
+    //border: 2px solid brand2 !important
+
+.highlightSiteWide div.keyStats p span
+    color: brand2 !important  
+
+.priceOfferSiteWide div.keyStats p span
+    color: offer !important  
+
+.highlight div.keyStats p span
+    color: brand2 !important
+.poa h3,   
+.poa div.keyStats *
+    color: brand2 !important
+.inactive *,     
+.inactive div.keyStats *
+    color: blackAlp25 !important
+
+div.lozenge
+    background-color: brand0
+    color: white
+    display: block
+    position absolute
+    top:0
+    right: 0
+    padding: padXXS*0.75 padXXS
+    //width: 100%
+    text-align: center
+.messageArea
+    background-color: brand0
+    color: white
+    margin-top:marXXS
+    margin-bottom:marXXS
+    padding: padXXS padXS
+    font-size:1.1em
+    line-height:1.4em
+    border-radius:4px
+.messageArea.system
+    background-color: white
+    color: brand1
+    border-radius:0px
+    border-left:2px solid brand0
+    font-size:1em
+    //padding-left: 0
+.messageArea.otherOffer,
+.otherOffer div.lozenge
+    background-color: gold
+    color: white
+.messageArea.highlight,
+.highlight div.lozenge,
+.highlightSiteWide div.lozenge
+    background-color: brand1
+    color: white
+.messageArea.priceOffer,
+.priceOffer div.lozenge,
+.priceOfferSiteWide div.lozenge
+    background-color: offer
+    color: white
+.messageArea.system span.cta
+    display: flex
+    align-items: center
+    column-gap: 4px
+    margin-top:marXXS*0.5
+.messageArea.system .ctaButton
+    margin-bottom: 0
+.avails 
+    margin-bottom: marXXS
+.instock i
+    color: good
+.instockLow i
+    color: ok
+.ltdStock i
+    color: amber
+.oos i
+    color: alert
+
+div.pricePoint 
+    display: flex
+    align-items: baseline
+    column-gap: 1vw
+
+
+div.spaceBetween
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+/* oil finder control */
+.findOil input[type=text]
+    margin: 0
+@media phoneRule
+    .findOil .ctaShop
+        width: 90%
+        margin-top: 1vh
+    .findOil div.content
+        display: block
+        text-align: center
+@media medDesktop
+    .findOil div.content
+        display: block
+        text-align: center
+        width:60vw
+        margin: 0px auto
+        {test}
