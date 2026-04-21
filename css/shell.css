@@ -2839,6 +2839,14 @@ div.mobileCart {
 .imagerySlider div.item {
   border-left: 10px solid #ffd300;
 }
+.imagerySlider.hero div.item > div {
+  height: 60vh;
+}
+@media screen and (min-width: 2100px) {
+  .imagerySlider.hero div.item > div {
+    height: 45vh;
+  }
+}
 div.bannerInPage {
   padding: 1.875vw 3vw;
   text-align: center;
