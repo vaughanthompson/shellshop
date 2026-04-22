@@ -2094,9 +2094,6 @@ div.catList p.alsoBought {
   margin-top: -30px;
   margin-bottom: 20px;
 }
-div.catList.bundles {
-  border: 1px solid #f00;
-}
 @media screen and (min-width: 750px) {
   div.catList div.catGroup {
     display: -ms-grid;
@@ -2104,6 +2101,12 @@ div.catList.bundles {
     grid-column-gap: 2vw;
     grid-row-gap: 2vw;
     grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+  div.catList.bundles div.catGroup {
+    display: block;
+  }
+  div.catList.bundles .catItem {
+    margin-bottom: 5vw;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -2120,6 +2123,14 @@ div.catList.bundles {
   div.catList .catItem {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
+  }
+  div.catList.bundles div.catGroup {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
+  div.catList.bundles .catItem {
+    margin-bottom: 0;
   }
 }
 div.catGroup .catItem {
@@ -2638,6 +2649,14 @@ a.ctaButton.ctaShop {
 div.catItem .ctaButton.ctaShop,
 div.catItem a.ctaButton.ctaShop {
   width: 100%;
+}
+@media screen and (min-width: 750px) {
+  div.catList.bundles div.catItem .ctaButton.ctaShop,
+  div.catList.bundles div.catItem a.ctaButton.ctaShop {
+    width: auto;
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+  }
 }
 .ctaButton:hover,
 a.ctaButton:hover {
