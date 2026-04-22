@@ -6,7 +6,7 @@ body > main > article,
 footer > article
     padding: 0 padL 0 padL
     @media dtrigger
-        padding: 0 padXL padM padXL
+        padding: 0 padXL 0 padXL
     
 main 
     box-shadow: 0 20px 40px rgba(0,0,0,0.1)
@@ -707,7 +707,7 @@ main > * > div.imageBlocks section > a.cta
     align-items: center
 
 .simpleFlex.flexSpaced 
-    column-gap: 50px
+    column-gap: 4vw
 
 .simpleFlex.centered 
     justify-content: center
@@ -786,6 +786,28 @@ div.imageThumb
     background-position: center
     background-repeat: no-repeat
     margin-bottom: marStd
+
+
+
+div.catList
+    @media ttrigger
+        margin-top: marStd
+        margin-bottom: marStd
+
+div.catList > h2
+div.catList > h5
+div.catList > .loadMore
+    text-align: center
+div.catList > h5
+    font-weight: 400
+    margin-top: 10px
+div.catList p.alsoBought
+    font-size: 1.2em
+    margin-top: -30px
+    margin-bottom: 20px
+    
+div.catList.bundles
+    {test}    
 
 @media ttrigger
     div.catList div.catGroup
@@ -944,4 +966,13 @@ div.spaceBetween
         text-align: center
         width:60vw
         margin: 0px auto
-        {test}
+@media ttrigger
+    .findOil div.content section
+        padding-top: padStd
+        padding-bottom: padStd*1.2
+
+/* brands strip */
+@media ttrigger
+    .brandStrip div.content section
+        padding-top: padStd
+        padding-bottom: padStd

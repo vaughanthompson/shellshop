@@ -155,7 +155,7 @@ hr {
 }
 hr.thick {
   border: none;
-  border-bottom: 3px solid #ffd300 !important;
+  border-bottom: 5px solid #ffd300 !important;
 }
 hr.thick.active {
   border-bottom-color: #000;
@@ -979,7 +979,7 @@ footer > article {
   body > main > header,
   body > main > article,
   footer > article {
-    padding: 0 10vw 3vw 10vw;
+    padding: 0 10vw 0 10vw;
   }
 }
 main {
@@ -1975,9 +1975,9 @@ main > * > div.imageBlocks section > a.cta {
   align-items: center;
 }
 .simpleFlex.flexSpaced {
-  -webkit-column-gap: 50px;
-  -moz-column-gap: 50px;
-  column-gap: 50px;
+  -webkit-column-gap: 4vw;
+  -moz-column-gap: 4vw;
+  column-gap: 4vw;
 }
 .simpleFlex.centered {
   -webkit-box-pack: center;
@@ -2073,6 +2073,29 @@ div.imageThumb {
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 1.5vw;
+}
+@media screen and (min-width: 750px) {
+  div.catList {
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+  }
+}
+div.catList > h2,
+div.catList > h5,
+div.catList > .loadMore {
+  text-align: center;
+}
+div.catList > h5 {
+  font-weight: 400;
+  margin-top: 10px;
+}
+div.catList p.alsoBought {
+  font-size: 1.2em;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+div.catList.bundles {
+  border: 1px solid #f00;
 }
 @media screen and (min-width: 750px) {
   div.catList div.catGroup {
@@ -2293,7 +2316,18 @@ div.spaceBetween {
     text-align: center;
     width: 60vw;
     margin: 0px auto;
-    border: 1px solid #f00;
+  }
+}
+@media screen and (min-width: 750px) {
+  .findOil div.content section {
+    padding-top: 1.5vw;
+    padding-bottom: 1.8vw;
+  }
+}
+@media screen and (min-width: 750px) {
+  .brandStrip div.content section {
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
   }
 }
 /* 
@@ -2430,7 +2464,7 @@ h4,
 h5,
 .h5 {
   font-weight: 800;
-  font-size: 1.3em;
+  font-size: 1.4em;
   line-height: 120%;
 }
 h6,
@@ -2848,7 +2882,7 @@ div.mobileCart {
   z-index: 10000;
 }
 .imagerySlider div.item > div {
-  height: 50vh;
+  height: 45vh;
   border-left: 20px solid #e42313;
 }
 .imagerySlider div.item {
@@ -2860,6 +2894,11 @@ div.mobileCart {
 @media screen and (min-width: 2100px) {
   .imagerySlider.hero div.item > div {
     height: 45vh;
+  }
+}
+@media screen and (min-width: 750px) {
+  .imagerySlider {
+    margin-top: 1.5vw;
   }
 }
 div.bannerInPage {
