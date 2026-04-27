@@ -3146,7 +3146,7 @@ div.item.slick-current .slideThumbLink {
 .shopWidget p.offerCopy {
   font-size: 1em;
   font-weight: 500;
-  line-height: 1em;
+  line-height: 1.2em;
   margin-bottom: 1.5em;
 }
 @media screen and (max-width: 750px) {
