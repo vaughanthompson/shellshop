@@ -335,9 +335,168 @@ div.bannerInPage
     padding: padStd*1.25 padM
     text-align: center
     box-shadow: 0px 10px 20px 0px blackAlp20
-    border: 1px solid white
+    border: 5px solid brand2
+    border-radius: 10px
+    text-wrap: balance
     @media phoneRule
         padding: padXL padM
         margin-bottom: 1.5em
 div.bannerInPage a
     text-decoration: none
+.productInfo div.bannerInPage
+    padding: padStd
+    font-size: 80%
+    box-shadow: none
+    border: 5px solid brand2
+    @media phoneRule
+        padding: padL padM
+
+
+/* product page image object */
+a.zoomlink
+    background-color: white
+    display: block
+    padding: 0.5em
+    border-radius: 2px
+    text-decoration: none
+.zoomlink div.imageHolder
+    background-color: white
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    height: 575px
+    @media phoneRule
+        height: 40vh
+
+
+
+.slideThumbsControl
+    width: 80%
+    margin:0px auto
+
+.slideThumbs
+    margin-top: 1em
+    margin-bottom: 1.5em
+
+.slideThumbLink
+    display: block
+    padding: 10px
+    border-radius: 2px
+    text-decoration: none
+    border-bottom:4px solid rgba(0,0,0,0)
+    margin-left: 10px
+    margin-right: 10px
+    
+
+.slideThumbLink:hover
+    cursor: pointer
+
+div.item.slick-current .slideThumbLink
+    border-color: brand2 !important
+
+.slideThumbLink div.imageHolder
+    background-color: white
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    height: 5vw
+    width: auto
+    @media phoneRule
+        height: 60px
+
+.breadcrumb
+    @media phoneRule
+        margin-bottom: 1em
+
+.breadcrumb p
+    margin-bottom: 0
+
+
+.descriptionContent p
+    margin-bottom: 5px
+
+.shopWidget 
+    display: flex
+    align-items: flex-end
+    flex-wrap: wrap
+    column-gap: 2vw
+    row-gap: 2em
+    @media phoneRule
+        row-gap: 0.5em
+
+.shopWidget > div
+    flex: 1 1 30%
+.shopWidget > div.cartAdd
+    flex-basis: 15%
+
+.shopWidget h2
+    font-size:2.5em
+    @media phoneRule
+        margin-bottom: 0.15em
+
+
+.shopWidget div.cartAdd > div
+    background-color: brand3
+    padding: 10px 20px
+    column-gap: 1em
+    justify-content: center
+    align-items: center
+    border-radius: 10px
+    display: inline-flex
+    @media phoneRule
+        margin-bottom: marM
+    
+.shopWidget p.packSize,
+.shopWidget p.offerCopy
+    font-size: 1em
+    font-weight: 500
+    line-height: 1em
+    margin-bottom: 1.5em
+    @media phoneRule
+        margin-bottom: 1em
+        font-size: 1.2em 
+
+.shopWidget.hasOffer h2 span.price
+    color: brand2
+.shopWidget.outofstock h2 span.price
+    color: brand5
+
+    
+.shopWidget p.offerCopy
+    @media phoneRule
+        margin-bottom: 1.5em
+.shopWidget p.offerCopy span
+    color: brand2
+    font-weight: 800
+.avail 
+    background-color: brand4
+    text-align: center
+    font-size: 1em
+    font-weight: 600
+    letter-spacing: 0.03em
+    padding: 13px 10px 14px 10px
+    color: white
+    border-radius: 50px
+    margin-top: 1em
+    @media phoneRule
+        margin-top: 0
+        padding-top: 0
+    
+
+.instock .avail
+    background-color: rgba(0, 200, 0, 1.0)
+    @media phoneRule
+        background: none
+        color: rgba(0, 180, 0, 1.0)
+
+.lowstock .avail
+    background-color: rgba(247, 147, 30, 1.0)
+    @media phoneRule
+        background: none
+        color: rgba(247, 147, 30, 1.0)
+
+.outofstock .avail
+    background-color: brand2
+    @media phoneRule
+        background: none
+        color: brand2

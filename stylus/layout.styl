@@ -76,6 +76,7 @@ div.content > section
     @media ttrigger
         flex: 1 1 auto 
         flex-basis: 50%
+
         
 main > *:not(.grid) div.content
     @media tabletRule
@@ -810,30 +811,38 @@ div.catList p.alsoBought
 
 @media ttrigger
     div.catList div.catGroup
-        display: grid
+        //display: grid
+        display: flex
+        flex-wrap: wrap
         grid-column-gap: 2vw;
         grid-row-gap: 2vw;
         grid-template-columns: repeat(auto-fill, minmax(30%, 1fr) )
+        justify-content: center
+    div.catList .catItem
+        flex:0 1 23vw
     div.catList.bundles div.catGroup
         display: block 
     div.catList.bundles .catItem
         margin-bottom: marL
 @media dtrigger
     div.catList div.catGroup
-        display: grid
+        //display: grid
         grid-column-gap: 1.5vw;
         grid-row-gap: 2vw;
-        //grid-template-columns: repeat(3, \[col\] 20vw )
         grid-template-columns: repeat(auto-fill, minmax(20%, 1fr) )
         grid-auto-flow: row dense
         grid-auto-rows: min-content
+        justify-content: center
     div.catList .catItem
-        flex-basis: 20%
+        flex:0 1 17vw
     div.catList.bundles div.catGroup
         display: grid
         grid-template-columns: repeat(auto-fill, minmax(40%, 1fr) )
     div.catList.bundles .catItem
         margin-bottom: 0
+@media lgdesktopRule
+    div.catList .catItem
+        flex:0 1 11vw
 
 div.catGroup .catItem
     border: 1px solid white
@@ -967,6 +976,9 @@ div.spaceBetween
     .findOil div.content
         display: block
         text-align: center
+    .findOil div.productPage
+        padding-top: padL
+        padding-bottom: padStd*1.2
 @media medDesktop
     .findOil div.content
         display: block
@@ -977,9 +989,18 @@ div.spaceBetween
     .findOil div.content section
         padding-top: padStd
         padding-bottom: padStd*1.2
+    .findOil div.productPage
+        padding: padStd padStd padStd*1.2 padStd
 
 /* brands strip */
 @media ttrigger
     .brandStrip div.content section
         padding-top: padStd
         padding-bottom: padStd
+
+
+
+/* shell product page layout */
+article.productInfo
+    @media phoneRule
+        text-align: center
