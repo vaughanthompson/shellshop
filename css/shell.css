@@ -2164,8 +2164,8 @@ div.catList p.alsoBought {
     -webkit-box-flex: 1;
     -o-box-flex: 1;
     box-flex: 1;
-    -ms-flex: 0 1 11vw;
-    flex: 0 1 11vw;
+    -ms-flex: 0 1 20%;
+    flex: 0 1 20%;
   }
 }
 div.catGroup .catItem {
