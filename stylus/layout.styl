@@ -28,14 +28,33 @@ body > main > article:last-of-type
         margin-right: auto !important
 
 // footer
-body > footer
+footer 
+    padding-bottom: padM
+footer > article
     @media phoneRule
-        margin-top: marXL
-    @media dtrigger
-        padding: padM padL*1.5
+        padding-bottom: padXL
+        margin-top: marL
+        margin-bottom: marM
+footer > article.footerContent
+    text-align: center
+    @media phoneRule
+        text-wrap: balance
+footer > article.footerContent section
+    @media phoneRule
+        margin-bottom: 2em
+footer div.simpleFlex
+    @media phoneRule
+        display: block
+        text-align: center
 
-
-
+footer div.simpleFlex a
+    @media phoneRule
+        display: block
+        margin: 10px 0
+    
+footer div.simpleFlex img
+    @media phoneRule
+        margin-top: 1em
 
 
 main > * > div > div > div > div.control
@@ -81,8 +100,7 @@ div.content > section
 main > *:not(.grid) div.content
     @media tabletRule
         flex-wrap: wrap
-main div > header,
-footer header
+main div > header
     padding: padM
     @media tabletRule 
         padding: padXS padStd padXS padStd
@@ -1004,3 +1022,26 @@ div.spaceBetween
 article.productInfo
     @media phoneRule
         text-align: center
+
+
+/* basic sidebar page layout */
+article.basicContent header
+    padding-top: padL
+article.basicContent hr 
+    margin: 2em 0 3em 0
+@media ttrigger
+    article.basicContent div.content
+        flex-wrap: wrap
+    article.basicContent header
+        flex: 1 0 100%
+        padding-bottom: 0
+        padding-top: padL
+    article.basicContent section
+        flex: 0 1 48%
+        margin-bottom: 2em
+        border-radius: 1em
+    article.sidebar section
+        flex: 1 1 50%
+        {test}
+    article.sidebar section:first-of-type
+        flex-basis: 25%

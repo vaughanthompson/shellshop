@@ -1009,14 +1009,44 @@ main {
     margin-right: auto !important;
   }
 }
+footer {
+  padding-bottom: 3vw;
+}
 @media screen and (max-width: 750px) {
-  body > footer {
-    margin-top: 10vw;
+  footer > article {
+    padding-bottom: 10vw;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
   }
 }
-@media screen and (min-width: 1100px) {
-  body > footer {
-    padding: 3vw 7.5vw;
+footer > article.footerContent {
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  footer > article.footerContent {
+    text-wrap: balance;
+  }
+}
+@media screen and (max-width: 750px) {
+  footer > article.footerContent section {
+    margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 750px) {
+  footer div.simpleFlex {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  footer div.simpleFlex a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  footer div.simpleFlex img {
+    margin-top: 1em;
   }
 }
 main > * > div > div > div > div.control {
@@ -1093,13 +1123,11 @@ div.content > section {
     flex-wrap: wrap;
   }
 }
-main div > header,
-footer header {
+main div > header {
   padding: 3vw;
 }
 @media screen and (min-width: 750px) and (max-width: 1100px) {
-  main div > header,
-  footer header {
+  main div > header {
     padding: 0.9vw 1.5vw 0.9vw 1.5vw;
   }
 }
@@ -2388,6 +2416,51 @@ div.spaceBetween {
     text-align: center;
   }
 }
+article.basicContent header {
+  padding-top: 5vw;
+}
+article.basicContent hr {
+  margin: 2em 0 3em 0;
+}
+@media screen and (min-width: 750px) {
+  article.basicContent div.content {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  article.basicContent header {
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    padding-bottom: 0;
+    padding-top: 5vw;
+  }
+  article.basicContent section {
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 0 1 48%;
+    flex: 0 1 48%;
+    margin-bottom: 2em;
+    border-radius: 1em;
+  }
+  article.sidebar section {
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    border: 1px solid #f00;
+  }
+  article.sidebar section:first-of-type {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
 /* 
 * typography 
 */
@@ -2546,7 +2619,7 @@ p {
   margin-top: 0em;
 }
 main .content li {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.4em;
 }
 strong {
@@ -2818,8 +2891,6 @@ video.hidden-xs {
 }
 ul,
 ol {
-  border-bottom: 3px solid #000;
-  border-top: 1px solid rgba(0,0,0,0.1);
   padding: 0;
   margin: 1em 0;
 }
@@ -2829,9 +2900,8 @@ ol {
   border-bottom: 2px solid #dedede;
 }
 li {
-  list-style-type: none;
-  padding: 1em 1em 1em 0;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 0.5em 1em 0.5em 0;
+  margin-left: 1em;
 }
 .rev li {
   border-bottom: 1px solid #dedede;
