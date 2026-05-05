@@ -314,6 +314,9 @@ div.mobileCart
 
 
 /* basic slider */
+.imagerySlider
+        margin-top: marL
+        margin-bottom: marL
 .imagerySlider div.item > div
     height: 45vh
     border-left:20px solid brand2
@@ -324,9 +327,12 @@ div.mobileCart
 @media lgdesktopRule
     .imagerySlider.hero div.item > div
         height: 45vh
+    header .imagerySlider.hero div.item > div
+        height: 55vh
 @media ttrigger
     .imagerySlider
         margin-top: marStd
+        margin-bottom: marM
 
 
 
@@ -404,6 +410,35 @@ div.item.slick-current .slideThumbLink
     width: auto
     @media phoneRule
         height: 60px
+
+
+
+.slideMulti div.item
+    padding: padStd
+    margin: marStd
+    border: 1px solid white
+    box-shadow: 0px 10px 20px 0px blackAlp20
+    
+/* Force the track to be a flex container */
+.slideMulti .slick-track {
+    display: flex !important;
+}
+/* Ensure slides stretch to fill the track height */
+.slideMulti .slick-slide {
+    height: inherit !important;
+}
+.slideMulti .slick-prev 
+    left: -20px
+
+.slideMulti .slick-next 
+    right: -25px
+
+
+
+
+
+
+
 
 .breadcrumb
     @media phoneRule

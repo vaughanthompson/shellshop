@@ -91,8 +91,10 @@ div.content.rowAlignCentre
     @media ttrigger
         align-items: center
 div.content > section
-    padding: padM
+    @media phoneRule
+        padding: padL
     @media ttrigger
+        padding: padM
         flex: 1 1 auto 
         flex-basis: 50%
 
@@ -101,101 +103,13 @@ main > *:not(.grid) div.content
     @media tabletRule
         flex-wrap: wrap
 main div > header
-    padding: padM
+    @media phoneRule
+        padding: padL
+    @media ttrigger
+        padding: padM
     @media tabletRule 
         padding: padXS padStd padXS padStd
-/*        
-main > *:not(.grid) div.content > section,
-main > *:not(.grid) div.contentNoFlex > section
-    padding: padXS padM padXS padM
-    @media phoneRule
-        padding: padL padL 0 padL
-    @media tabletRule 
-        flex: 0 1 auto 
-        flex-basis: 46%
-        padding: padXS padStd padXS padStd
-main div > header
-    @media phoneRule
-        padding: padXL padXL 0 padXL
 
-main > *:not(.grid) div.contentNoFlex > section
-    @media smallDesktop
-        padding-right: 0
-        padding-left:0
-
-main > *:first-child div.content
-    @media tabletRule
-        flex-direction: column
-main > *:first-child div.content > section
-    @media ttrigger
-        flex: 1 1 auto
-        flex-basis: 50%
-
-main > .grid div.content
-    @media mtrigger
-        flex-direction: row 
-        flex-wrap: wrap
-        padding-left: padXS
-        padding-right: paXS
-    @media ttrigger
-        display: grid
-        grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr))
-        grid-column-gap: padM
-        grid-row-gap: padXS
-     @media phLandscape
-        display: grid
-        grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr))
-        grid-column-gap: padM
-        grid-row-gap: padXS
-    @media dtrigger
-        grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr))
-        grid-column-gap: padXS
-        grid-row-gap: padXS
-    @media lgdesktopRule
-        grid-template-columns: repeat(auto-fill, minmax(12vw, 1fr))
-        grid-column-gap: padXS
-        grid-row-gap: padXS
-
-main > .grid div.content > section
-    display: flex
-    justify-content: center
-    align-items: center
-    @media mtrigger
-        flex: 0 1 auto
-        flex-basis: 100%
-        margin: marXL marXL 0 marXL 
-        min-height: 20vw
-    @media ttrigger
-        min-height: 27.5vw
-    @media dtrigger
-        min-height: 16.5vw    
-    @media ie 
-        flex-basis: 20%
-        min-height: 20vw
-    @media phLandscape
-        min-height: 25.5vw
-    @media ie
-        height:20em
-main > .grid.filled div.content > section
-    background-color: whiteAlp75
-
-main > .grid div.content > section > div,
-main > .grid div.content > section > a
-    display: flex
-    padding: padM
-    align-self: stretch
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    flex: 1 1 auto
-    @media mtrigger
-        align-items: flex-start
-main > .grid div.content > section > a
-    text-decoration: none
-main > .grid.links div.content > section:hover
-    background-color: whiteAlp50
-
-*/
 
 
 
@@ -727,7 +641,8 @@ main > * > div.imageBlocks section > a.cta
 
 .simpleFlex.flexSpaced 
     column-gap: 4vw
-
+footer .simpleFlex.flexSpaced 
+    column-gap: 3vw
 .simpleFlex.centered 
     justify-content: center
 
@@ -1029,7 +944,7 @@ article.basicContent header
     padding-top: padL
 article.basicContent hr 
     margin: 2em 0 3em 0
-@media ttrigger
+@media dtrigger
     article.basicContent div.content
         flex-wrap: wrap
     article.basicContent header
@@ -1040,8 +955,14 @@ article.basicContent hr
         flex: 0 1 48%
         margin-bottom: 2em
         border-radius: 1em
+    article.basicContent section.fullW
+        flex-basis: 100%
     article.sidebar section
         flex: 1 1 50%
-        {test}
     article.sidebar section:first-of-type
-        flex-basis: 25%
+        flex-basis: 20%
+    article.sidebar.flip section:first-of-type
+        flex-basis: 50%
+    article.sidebar.flip section:last-of-type
+        flex-basis: 20%
+        
