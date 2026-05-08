@@ -2502,6 +2502,11 @@ article.basicContent hr {
         flex-basis: 20%;
   }
 }
+@media screen and (max-width: 750px) {
+  .newForm .simpleFlex {
+    display: block;
+  }
+}
 /* 
 * typography 
 */
