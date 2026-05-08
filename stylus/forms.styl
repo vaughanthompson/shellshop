@@ -119,7 +119,7 @@ input[type=text]:not(.floating__input),
 input[type=email]:not(.floating__input),
 input[type=password]:not(.floating__input),
 textarea:not(.floating__input) {
-  width: 85%;
+  width: 100%;
   padding:.7em .8em .6em .8em;
   box-sizing: border-box;
   line-height: 1.8em;
@@ -130,10 +130,15 @@ textarea:not(.floating__input) {
   color: rgba(0,0,0,1.0);
   box-shadow: 0 10px 20px 0px blackAlp15
 }
+textarea {
+  min-height: 150px;
+}
 input[type=checkbox],
 input[type=radio] {
   margin-left:10px;
   margin-right:10px;
+  width:20px;
+  height: 20px;
 }
 
 textarea:not(.floating__input)::placeholder {
@@ -618,7 +623,8 @@ fieldset input[type=email],
 fieldset input[type=text],
 fieldset input[type=password],
 fieldset select,
-input#DiscountCode {
+input#DiscountCode,
+textarea {
   margin-top: 10px;
   margin-bottom: 5px;
   margin-right: 5px;
@@ -654,3 +660,4 @@ input[type=email]::placeholder,
 fieldset input[type=text]::placeholder,
 fieldset input[type=password]::placeholder
   color: #000
+

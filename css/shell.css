@@ -368,7 +368,7 @@ input[type=text]:not(.floating__input),
 input[type=email]:not(.floating__input),
 input[type=password]:not(.floating__input),
 textarea:not(.floating__input) {
-  width: 85%;
+  width: 100%;
   padding: 0.7em 0.8em 0.6em 0.8em;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -381,10 +381,15 @@ textarea:not(.floating__input) {
   -webkit-box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
   box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
 }
+textarea {
+  min-height: 150px;
+}
 input[type=checkbox],
 input[type=radio] {
   margin-left: 10px;
   margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
 textarea:not(.floating__input)::-webkit-input-placeholder {
   color: #092745;
@@ -934,7 +939,8 @@ fieldset input[type=email],
 fieldset input[type=text],
 fieldset input[type=password],
 fieldset select,
-input#DiscountCode {
+input#DiscountCode,
+textarea {
   margin-top: 10px;
   margin-bottom: 5px;
   margin-right: 5px;
@@ -2707,6 +2713,12 @@ ul.vanilla {
 }
 ul.vanilla li {
   padding: 0.3vw;
+}
+ul.noBullet li {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  line-height: 1.2em;
 }
 nav.shopStrip h4 {
   margin: 0;
