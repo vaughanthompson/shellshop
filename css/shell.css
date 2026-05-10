@@ -1713,6 +1713,19 @@ div.selections div.content.selectionsHeader {
 #dNav nav {
   padding: 1.5vw;
 }
+#mNav.alt,
+#cNav.alt {
+  background-color: #e42313;
+  color: #fff;
+}
+#mNav.alt h2,
+#cNav.alt h3 {
+  color: #ffd300;
+}
+#mNav.alt #navTrigger,
+#mNav.alt #navClose {
+  color: #fff;
+}
 nav div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2532,6 +2545,10 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+#cNav.alt nav a:link:not(.ctaButton),
+#cNav.alt nav a:visited:not(.ctaButton) {
+  color: #fff;
+}
 p a:link,
 p a:visited {
   color: #e42313;
@@ -2825,10 +2842,11 @@ a.ctaButton {
   }
 }
 .ctaButton.ctaShop,
-a.ctaButton.ctaShop {
+a.ctaButton.ctaShop,
+#cNav.alt a.ctaButton {
   color: #ffd300;
   background-color: #e42313;
-  font-size: 1.2em;
+  font-size: 1.15em;
 }
 div.catItem .ctaButton.ctaShop,
 div.catItem a.ctaButton.ctaShop {
@@ -2843,7 +2861,8 @@ div.catItem a.ctaButton.ctaShop {
   }
 }
 .ctaButton:hover,
-a.ctaButton:hover {
+a.ctaButton:hover,
+#cNav.alt a.ctaButton:hover {
   color: #e42313;
   background-color: #ffd300;
 }

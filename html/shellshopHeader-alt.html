@@ -1,0 +1,192 @@
+﻿
+<!DOCTYPE html>
+<!-- end cms landing content -->
+<html>
+
+
+
+    <a href="#top" id="toTop" class="icon icon-arrow-up"></a>
+
+
+
+
+    <!-- mobile nav -->
+    <!-- mobile nav -->
+    <!-- mobile nav -->
+    <!-- mobile nav -->
+
+    
+
+    <div id="mNav" class="alt">
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logos/TDX-logo-full-reverse.svg" alt="TDX" style="max-height: 30px;">
+                </a>
+                <a href="/">
+                    <img src="/images/icons/icons2022/brand-shell-dist-REV.svg" alt="Shell Lubricants Distributor">
+                </a>
+            </div>
+            
+            <div>
+                <a href="/checkout" class="cart ctaButton">$0.00 (0)</a>
+                <a href="#" id="navTrigger" class="icon icon-ico-menu"></a>
+                <a href="#" id="navClose" class="icon icon-ico-close"></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mblnav">
+        <div class="mblnavContainer">
+            <div class="navSpace">&nbsp;</div>
+
+            <div class="mblnavSection">
+                <a href="/">Passenger Car Oil</a>
+                <a href="/">Heavy Diesel Oil</a>
+                <a href="/">Tranmission &amp; Axle Oil</a>
+                <a href="/">Marine Oil</a>
+                <a href="/">Misc Oil</a>
+                <a href="/">Grease</a>
+                <a href="/">Cleaners &amp; Coolant</a>
+                <a href="/">Filter Finder</a>
+                <span class="spacer spacer5"></span>
+                <a href="/">My Account</a>
+                <a href="/">About Us</a>
+                <a href="/">Terms &amp; Conditions</a>
+                <a href="/">Delivery &amp; returns</a>
+                <a href="/">Contact Us</a>
+                <a href="/">Home</a>
+            </div>
+
+            <div class="navSpace">&nbsp;</div>
+        </div>
+    </div>
+
+
+
+    <div id="navSpacer"></div>
+
+
+    <div class="m mobileCart">
+        <a href="/cart" class="ctaButton">$0.00 (0)</a>
+    </div>
+
+
+
+
+
+
+
+    <!-- desk nav -->
+    <!-- desk nav -->
+    <!-- desk nav -->
+    <!-- desk nav -->
+
+
+
+
+    <div id="cNav" class="alt">
+        <nav>
+            
+            
+
+            <div>
+                <a href="/"><img src="/images/logos/TDX-logo-full-reverse.svg" alt="TDX" class="deskLogo"></a>
+                <div class="tagline">
+                    <h3 class="nowrap">Shell Shop</h3>
+                    <h6>The best deals on Shell Oils &amp; Lubricants - delivered NZ Wide!</h6>
+                </div>
+                
+            </div>
+
+            <div>
+                <a href="/checkout" class="ctaButton nowrap">$0.00 (0 item/s)</a>
+                <a href="/account" class="nowrap">My Account</a>
+                <img src="/images/icons/icons2022/brand-shell-dist-REV.svg" alt="Shell Lubricants Distributor" class="deskLogoLarge">
+            </div>
+            
+            
+        </nav>
+    </div>
+
+
+    
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        
+            // Mobile Navigation - FOR LOCALHOST TESTING ONLY
+            $.localScroll({
+                target: 'body',
+                queue: false,
+                hash: false,
+                duration: 500,
+                easing: 'easeOutQuad'
+            });
+
+            $('#toTop').css('opacity','0.0');
+                new Waypoint({
+                    element: document.getElementsByTagName('main'),
+                    handler: function(direction) {
+                        if (direction === 'down') {
+                            $('#toTop').fadeTo(1000,'1.0');
+                        }
+                        else {
+                            $('#toTop').fadeTo(1000,'0.0');
+                        }
+                    },
+                offset: '0'
+            })
+
+            $('#navClose').hide();
+
+
+            $('#navClose').click(function(){
+                $(this).hide();
+                $('#navCart').show();
+                $('#navTrigger').show();
+                $("div.mblnavContainer").scrollTo(0);
+                $('div.mblnav').hide();
+                $('html, body').removeClass('noscroll');
+                return false;
+            });
+
+            $('#navTrigger').click(function(){
+                $(this).hide();
+                $('#navCart').hide();
+                $('#navClose').show();
+                $('div.mblnav').fadeTo(400,1);
+                $('html, body').addClass('noscroll');
+                return false;
+            });
+
+        
+            
+    
+        });
+
+
+    </script>
+
+
+       
+    
+    
+    
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
