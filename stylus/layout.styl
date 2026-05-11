@@ -1044,6 +1044,10 @@ table.listItems tbody tr td:last-of-type
 table.listItems tr:last-of-type td
     border-bottom: none  
 
+table.listItems tbody td:last-child
+    @media ttrigger
+        text-align: right
+
 @media phoneRule
     table.listItems.orderHistory td > *:before
         display: block

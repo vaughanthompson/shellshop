@@ -2603,6 +2603,11 @@ table.listItems tbody td {
 table.listItems tr:last-of-type td {
   border-bottom: none;
 }
+@media screen and (min-width: 750px) {
+  table.listItems tbody td:last-child {
+    text-align: right;
+  }
+}
 @media screen and (max-width: 750px) {
   table.listItems.orderHistory td > *:before {
     display: block;
