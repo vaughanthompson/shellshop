@@ -2071,6 +2071,12 @@ footer .simpleFlex.flexSpaced {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.simpleFlex.centeredVert {
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 i.toggleIcon:before {
   font-family: 'icomoon';
   content: '\e904';
@@ -2545,7 +2551,7 @@ article.basicContent hr {
 }
 @media screen and (max-width: 750px) {
   .card > div {
-    padding: 1.5vw 0.9vw;
+    padding: 5vw 5vw;
   }
 }
 .card > div:first-of-type {
@@ -2576,7 +2582,7 @@ table.listItems tbody td {
 }
 @media screen and (max-width: 750px) {
   table.listItems tbody td {
-    padding: 10px 20px 5px 20px;
+    padding: 10px 5px 5px 5px;
     display: block;
     border: none;
   }
@@ -2859,7 +2865,6 @@ table.listItems .ctaButton {
   text-decoration: none !important;
 }
 ul.rowItem {
-  border: 1px solid #f00;
   margin: 0;
 }
 nav.shopStrip h4 {

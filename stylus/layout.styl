@@ -659,7 +659,8 @@ footer .simpleFlex.flexSpaced
     column-gap: 3vw
 .simpleFlex.centered 
     justify-content: center
-
+.simpleFlex.centeredVert 
+    align-items: center
 
 
 
@@ -998,7 +999,7 @@ article.basicContent hr
     background-color: #fefefe
     padding: padStd padStd
     @media phoneRule
-        padding: padStd padXS 
+        padding: padL padL
 
 .card > div:first-of-type
     border-radius: 20px 20px 0 0
@@ -1026,7 +1027,7 @@ table.listItems thead
 table.listItems tbody td
     padding: 20px 10px
     @media phoneRule
-        padding: 10px 20px 5px 20px
+        padding: 10px 5px 5px 5px
         display: block
         border:none
 table.listItems tbody tr td:first-of-type
