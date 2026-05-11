@@ -744,7 +744,7 @@ div.catList
 
 div.catList > h2
 div.catList > h5
-div.catList > .loadMore
+.loadMore
     text-align: center
 div.catList > h5
     font-weight: 400
@@ -986,3 +986,75 @@ article.basicContent hr
 .newForm .simpleFlex
     @media phoneRule
         display: block
+
+/* card stylying */
+.card > div
+    box-shadow: 0 5px 25px 0px blackAlp15
+    border: 1px solid
+    border-bottom-color: #f1f1f1
+    border-right-color: #f1f1f1
+    border-left-color: white
+    border-top-color: white
+    background-color: #fefefe
+    padding: padStd padStd
+    @media phoneRule
+        padding: padStd padXS 
+
+.card > div:first-of-type
+    border-radius: 20px 20px 0 0
+
+.card > div:last-of-type
+    border-radius: 0 0 20px 20px
+
+
+.card > div:nth-child(1):nth-last-child(1),
+.card > div:nth-child(1):nth-last-child(1) ~ div
+    border-radius: 20px 20px 20px 20px
+
+
+table.listItems
+    font-size:1.1em
+    width: 100%
+
+table.listItems td
+    padding: 10px
+    border-bottom: 1px solid brand3
+
+table.listItems thead
+    @media phoneRule
+        display: none
+table.listItems tbody td
+    padding: 20px 10px
+    @media phoneRule
+        padding: 10px 20px 5px 20px
+        display: block
+        border:none
+table.listItems tbody tr td:first-of-type
+    @media phoneRule
+        margin-top: marL
+table.listItems tbody tr td:last-of-type
+    @media phoneRule
+        border-bottom: 1px solid brand3
+        padding-bottom: marXL
+        padding-top: padL
+        margin-bottom: marM
+        
+
+table.listItems tr:last-of-type td
+    border-bottom: none  
+
+@media phoneRule
+    table.listItems.orderHistory td > *:before
+        display: block
+        font-size: 0.9em
+        color: brand1
+    table.listItems.orderHistory td:nth-child(1) > *:before
+        content: 'Date'
+    table.listItems.orderHistory td:nth-child(2) > *:before
+        content: 'Order ID'    
+    table.listItems.orderHistory td:nth-child(3) > *:before
+        content: 'Items'  
+    table.listItems.orderHistory td:nth-child(4) > *:before
+        content: 'Price'  
+    table.listItems.orderHistory td:nth-child(5) > *:before
+        content: 'Status'  

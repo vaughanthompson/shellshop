@@ -64,7 +64,7 @@ a.cta:hover::after
     box-shadow: 0 5px 25px 0px blackAlp20
     border-radius: 20px
     //transition: 0.3s
-    padding: 17px 20px 18px 20px !important 
+    padding: 16px 20px 18px 20px !important 
     @media phoneRule
         padding: padM padL padM padL !important 
 .ctaButton.ctaShop, 
@@ -90,7 +90,6 @@ a.ctaButton:hover,
     background-color: brand3
 
 .ctaButton.activeLink 
-    {test}
     border:none !important
     background: none !important
     box-shadow: none
@@ -539,3 +538,24 @@ div.item.slick-current .slideThumbLink
     @media phoneRule
         background: none
         color: brand2
+
+
+/* checkout free shipping progress bar */
+/* The background track */
+.progress-track
+    width: 100%
+    background-color: #efefef
+    border-radius: 10px
+    height: 10px
+    overflow: hidden
+    @media phoneRule
+        margin-bottom: 1em
+
+
+/* The animating bar */
+.progress-fill
+    height: 100%
+    border-radius: 10px
+    background-color: brand3
+    width: 0 /* Starting width */
+    animation: load50 1.5s ease-in-out forwards

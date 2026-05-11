@@ -136,6 +136,18 @@
 .brand10bg {
   background-color: #514d4c;
 }
+.good {
+  color: #39b54a;
+}
+.ok {
+  color: #ffa500;
+}
+.bad {
+  color: #f00;
+}
+.neutral {
+  color: #ccc;
+}
 html,
 body {
   width: 100%;
@@ -2156,7 +2168,7 @@ div.imageThumb {
 }
 div.catList > h2,
 div.catList > h5,
-div.catList > .loadMore {
+.loadMore {
   text-align: center;
 }
 div.catList > h5 {
@@ -2520,6 +2532,93 @@ article.basicContent hr {
     display: block;
   }
 }
+.card > div {
+  -webkit-box-shadow: 0 5px 25px 0px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px 0px rgba(0,0,0,0.15);
+  border: 1px solid;
+  border-bottom-color: #f1f1f1;
+  border-right-color: #f1f1f1;
+  border-left-color: #fff;
+  border-top-color: #fff;
+  background-color: #fefefe;
+  padding: 1.5vw 1.5vw;
+}
+@media screen and (max-width: 750px) {
+  .card > div {
+    padding: 1.5vw 0.9vw;
+  }
+}
+.card > div:first-of-type {
+  border-radius: 20px 20px 0 0;
+}
+.card > div:last-of-type {
+  border-radius: 0 0 20px 20px;
+}
+.card > div:nth-child(1):nth-last-child(1),
+.card > div:nth-child(1):nth-last-child(1) ~ div {
+  border-radius: 20px 20px 20px 20px;
+}
+table.listItems {
+  font-size: 1.1em;
+  width: 100%;
+}
+table.listItems td {
+  padding: 10px;
+  border-bottom: 1px solid #ffd300;
+}
+@media screen and (max-width: 750px) {
+  table.listItems thead {
+    display: none;
+  }
+}
+table.listItems tbody td {
+  padding: 20px 10px;
+}
+@media screen and (max-width: 750px) {
+  table.listItems tbody td {
+    padding: 10px 20px 5px 20px;
+    display: block;
+    border: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  table.listItems tbody tr td:first-of-type {
+    margin-top: 5vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  table.listItems tbody tr td:last-of-type {
+    border-bottom: 1px solid #ffd300;
+    padding-bottom: 10vw;
+    padding-top: 5vw;
+    margin-bottom: 3vw;
+  }
+}
+table.listItems tr:last-of-type td {
+  border-bottom: none;
+}
+@media screen and (max-width: 750px) {
+  table.listItems.orderHistory td > *:before {
+    display: block;
+    font-size: 0.9em;
+    color: #000;
+  }
+  table.listItems.orderHistory td:nth-child(1) > *:before {
+    content: 'Date';
+  }
+  table.listItems.orderHistory td:nth-child(2) > *:before {
+    content: 'Order ID';
+  }
+  table.listItems.orderHistory td:nth-child(3) > *:before {
+    content: 'Items';
+  }
+  table.listItems.orderHistory td:nth-child(4) > *:before {
+    content: 'Price';
+  }
+  table.listItems.orderHistory td:nth-child(5) > *:before {
+    content: 'Status';
+  }
+}
 /* 
 * typography 
 */
@@ -2742,6 +2841,27 @@ ul.noBullet li {
   margin: 0;
   line-height: 1.2em;
 }
+@media screen and (max-width: 750px) {
+  ul.noBullet li {
+    line-height: 1.5em;
+    margin-top: 0.5em;
+  }
+}
+ul.rowItem a:link,
+ul.rowItem a:visited,
+table.listItems a:link,
+table.listItems a:visited {
+  padding: 0;
+  font-size: 1em;
+}
+ul.rowItem .ctaButton,
+table.listItems .ctaButton {
+  text-decoration: none !important;
+}
+ul.rowItem {
+  border: 1px solid #f00;
+  margin: 0;
+}
 nav.shopStrip h4 {
   margin: 0;
   font-weight: bold;
@@ -2833,7 +2953,7 @@ a.ctaButton {
   -webkit-box-shadow: 0 5px 25px 0px rgba(0,0,0,0.2);
   box-shadow: 0 5px 25px 0px rgba(0,0,0,0.2);
   border-radius: 20px;
-  padding: 17px 20px 18px 20px !important;
+  padding: 16px 20px 18px 20px !important;
 }
 @media screen and (max-width: 750px) {
   .ctaButton,
@@ -2867,7 +2987,6 @@ a.ctaButton:hover,
   background-color: #ffd300;
 }
 .ctaButton.activeLink {
-  border: 1px solid #f00;
   border: none !important;
   background: none !important;
   -webkit-box-shadow: none;
@@ -3386,6 +3505,26 @@ div.item.slick-current .slideThumbLink {
     background: none;
     color: #e42313;
   }
+}
+.progress-track {
+  width: 100%;
+  background-color: #efefef;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+@media screen and (max-width: 750px) {
+  .progress-track {
+    margin-bottom: 1em;
+  }
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #ffd300;
+  width: 0 /* Starting width */;
+  -webkit-animation: load50 1.5s ease-in-out forwards;
+  animation: load50 1.5s ease-in-out forwards;
 }
 .content hr {
   border-bottom: 2px solid #000;

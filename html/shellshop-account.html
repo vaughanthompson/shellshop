@@ -72,7 +72,7 @@
         </div>
 
 
-        <hr>
+        <hr class="d">
         
 
 
@@ -88,14 +88,46 @@
 
 
                 <section>
-                    <h3 class="brand2color"> Hi Mark.</h3>
-                    <hr class="small">
-                    <nav>     
-                        <a href="/orders">Orders</a>
-                        <a href="">Saved Searches</a>
-                        <a href="/address" class="activeLink">Account Details</a>
-                        <a href="/address">My Addresses</a>
-                    </nav>
+                    <h3> Hi First Name</h3>
+                    <br>
+                    <p class="brand7color"><em>Last Login: Mon 5 April 2026. 11:26 am.</em></p>
+                    <br>
+                
+
+                    <style>
+                        /* percent to load progress bar */
+                        @keyframes load50 {
+                            0% {
+                                width: 0%;
+                            }
+                            100% {
+                                width: 56.5%;
+                            }
+                        }
+                    </style>
+                    <p class="balanceMe"><strong>Spend $43.50 more to get FREE shipping</strong></p>
+                    <div class="progress-track">
+                        <div class="progress-fill" ></div>
+                    </div>
+
+
+
+                    <ul class="vanilla noBullet">
+                        <li><a href="/shellshop-checkout">Shopping Cart ($56.50 2 item/s)</a></li>
+                        <!-- li><a href="/shellshop-checkout">Shopping Cart (is empty)</a></li -->
+                        <li><a href="#orders">Orders</a></li> 
+                        <li><a href="#searches">Saved Searches</a></li> 
+                        <li><a href="#details">Account Details</a></li> 
+                        <li><a href="#addresses">My Delivery Addresses</a></li> 
+                        <li><a href="/shellshop-contact">Contact Us</a></li> 
+                    </ul>
+                    
+                    
+                    <br><br>
+                    
+                    <a href="/logout" class="ctaButton ctaShop">Logout</a>
+                    <span class="spacer spacer5 m"></span>
+
                 </section>
                 
 
@@ -104,15 +136,90 @@
                 <section>
                     <h3 class="brand2color">Orders</h3>
                     <hr class="small">
-                    <p>List, Status, Re-order CTA</p>
-                    <br>
+                    <div class="card">
+                        <div>
+                        <table cellpadding="0" cellspacing="0" class="listItems orderHistory">
+                        <thead>
+                            <tr>
+                                <td>Date</td>
+                                <td>Order ID</td>
+                                <td>Items</td>
+                                <td>Price</td>
+                                <td>Status</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>08 May 2026</span></td>
+                                <td><span>#12345678</span></td>
+                                <td><span>3</span></td>
+                                <td><span>$125.50</span></td>
+                                <td><span class="good">Dispatched <a href="[tracking link]" target="_blank">Tracking</a></span></td>
+                                <td><a href="#">View Order</a></td>
+                            </tr>
+                            <tr>
+                                <td><span>08 May 2026</span></td>
+                                <td><span>#12345678</span></td>
+                                <td><span>3</span></td>
+                                <td><span>$125.50</span></td>
+                                <td ><span class="ok">Processing <a href="[tracking link]" target="_blank">Enquire</a></span></td>
+                                <td><a href="#">View Order</a></td>
+                            </tr>
+                            <tr>
+                                <td><span>08 May 2026</span></td>
+                                <td><span>#12345678</span></td>
+                                <td><span>3</span></td>
+                                <td><span>$125.50</span></td>
+                                <td><span class="neutral">Cancelled</span></td>
+                                <td><a href="#">View Order</a></td>
+                            </tr>
+                            <tr>
+                                <td><span>08 May 2026</span></td>
+                                <td><span>#12345678</span></td>
+                                <td><span>3</span></td>
+                                <td><span>$125.50</span></td>
+                                <td><span>Completed</span></td>
+                                <td><a href="#">View Order</a></td>
+                            </tr>
+                            <tr>
+                                <td><span>08 May 2026</span></td>
+                                <td><span>#12345678</span></td>
+                                <td><span>3</span></td>
+                                <td><span>$125.50</span></td>
+                                <td><span>Completed</span></td>
+                                <td><a href="#">View Order</a></td>
+                            </tr>
+                            
+                            
+                                
+                            </tbody>
+                        </table>
+                        
+                        
+                        <div class="loadMore">
+                            <span class="spacer spacer3"></span>
+                            <a href="/" class="ctaButton">Load More</a>
+                            <span class="spacer spacer3"></span>
+                        </div>
+                        
+                    </div>
+                        
+                    </div>
+
+                    
+                    
+                    <span class="spacer spacer5"></span>
+                    <span class="spacer spacer5 m"></span>
                     
 
                     <h3 class="brand2color">Saved Searches</h3>
                     <hr class="small">
                     <p>Vehicle Oil Finder</p>
                     <p>Filter Finder</p>
-                    <br>
+
+                    <span class="spacer spacer5 m"></span>
+
                     
                     
                     <h3 class="brand2color">Account Details</h3>
@@ -125,15 +232,31 @@
                     <p>List, Delete, Add New</p>
 
                     
-
-                    <ul>
-                        <li>1.</li>
-                        <li>Thumb</li>
-                        <li>Title</li>
-                        <li>Qty</li>
-                        <li>Item Price</li>
-                        <li>Total Line Price</li>
-                    </ul>
+                    <div class="card">
+                        <div class="d">
+                            <ul class="rowItem vanilla noBullet">
+                                <li>Date</li>
+                                <li>Order ID</li>
+                                <li>Items</li>
+                                <li>Total Price</li>
+                                <li>Status / Tracking</li>
+                                <li><a href="#" class="ctaButton ctaShop">View Order</a> </li>
+                            </ul>
+                        </div>
+                        <div>
+                            
+                            <ul class="rowItem vanilla noBullet">
+                                <li>Date</li>
+                                <li>Order ID</li>
+                                <li>Items</li>
+                                <li>Total Price</li>
+                                <li>Status / Tracking</li>
+                                <li><a href="#">Remove</a> </li>
+                                <li><a href="#" class="ctaButton ctaShop">View Order</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
 
                 </section>
 
@@ -150,14 +273,6 @@
         <span class="spacer spacer10"></span>
 
 
-
-
-
-
-
-
-        
-        
         
 
         <!--CMSEnd-->
@@ -262,7 +377,7 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $('#shellshopHeader').load("/html/shellshopHeader.html");
+            $('#shellshopHeader').load("/html/shellshopHeader-alt.html");
             $('#shellshopFooter').load("/html/shellshopFooter.html");
         });
     </script>

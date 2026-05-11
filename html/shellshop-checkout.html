@@ -95,32 +95,14 @@
                 <section>
                     
                     <style>
-                        /* The background track */
-                        .progress-track {
-                        width: 100%;
-                        background-color: #e0e0e0;
-                        border-radius: 10px;
-                        height: 10px;
-                        overflow: hidden;
-                        }
-
-                        /* The animating bar */
-                        .progress-fill {
-                        height: 100%;
-                        border-radius: 10px;
-                        background-color: orange;
-                        width: 0; /* Starting width */
-                        animation: load50 1.5s ease-in-out forwards;
-                        }
-
-                        /* Animation definition */
+                        /* percent to load progress bar */
                         @keyframes load50 {
-                        0% {
-                            width: 0%;
-                        }
-                        100% {
-                            width: 65%;
-                        }
+                            0% {
+                                width: 0%;
+                            }
+                            100% {
+                                width: 56.5%;
+                            }
                         }
                     </style>
   
