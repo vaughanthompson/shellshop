@@ -661,7 +661,12 @@ footer .simpleFlex.flexSpaced
     justify-content: center
 .simpleFlex.centeredVert 
     align-items: center
-
+.simpleFlex.alignTop 
+    align-items: flex-start
+.simpleFlex.alignBottom 
+    align-items: flex-end
+.simpleFlex.alignRight 
+    justify-content: space-between
 
 
 // cat
@@ -917,6 +922,7 @@ div.spaceBetween
 /* oil finder control */
 .findOil input[type=text]
     margin: 0
+    width: 90%
 @media phoneRule
     .findOil .ctaShop
         width: 90%
@@ -939,6 +945,9 @@ div.spaceBetween
         padding-bottom: padStd*1.2
     .findOil div.productPage
         padding: padStd padStd padStd*1.2 padStd
+    .findOil input[type=text]
+        margin: 0
+        width: 85%
 
 /* brands strip */
 @media ttrigger
@@ -976,10 +985,21 @@ article.basicContent hr
         flex: 1 1 50%
     article.sidebar section:first-of-type
         flex-basis: 20%
+    article.sidebar.revMob section:first-of-type
+        flex-basis: 40%
     article.sidebar.flip section:first-of-type
         flex-basis: 50%
     article.sidebar.flip section:last-of-type
         flex-basis: 20%
+    article.revMob div.content
+        flex-direction: row-reverse
+        align-items: flex-start
+    article.basicContent.revMob div.content section:first-of-type
+        padding: 0
+        
+    article.basicContent.revMob div.content section:last-of-type
+        border-right: 1px solid brand3
+        border-radius: 0
         
 
 /* contact */
@@ -1017,10 +1037,14 @@ table.listItems
     font-size:1.1em
     width: 100%
 
+
+
 table.listItems td
     padding: 10px
     border-bottom: 1px solid brand3
-
+table.listItems.cart td
+    padding: 5px 10px
+    border: none
 table.listItems thead
     @media phoneRule
         display: none
@@ -1063,3 +1087,26 @@ table.listItems tbody td:last-child
         content: 'Price'  
     table.listItems.orderHistory td:nth-child(5) > *:before
         content: 'Status'  
+
+
+/* checkout custom */
+.accountSignIn div.signInHidden
+    margin-top:1em;
+
+tr.spanRowCentered td
+    text-align: center !important
+tr.spanRowLeft td
+    text-align: left !important
+
+.inActive
+    opacity: 0.25
+.cartTotals
+    padding: 10px
+    @media phoneRule
+        padding: 10px 5px 5px 5px
+
+
+.cartOverrides section.cartPanel
+    @media dtrigger
+        position: sticky;
+        top: 2em

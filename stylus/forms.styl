@@ -238,11 +238,6 @@ div.alert strong {
   font-size: 1.05em;
 }
 
-@media screen and (min-width: 1000px) {
-  input.small {width:25%;}
-
-  input.med {width:50%;}
-}
 
 
 
@@ -638,14 +633,14 @@ input#DiscountCode {
   fieldset input[type=password],
   fieldset input[type=text],
   input#DiscountCode {
-    max-width:85%;
+    max-width:100%;
   }
 }
 @media screen and (min-width: 1200px) {
   fieldset input[type=email],
   fieldset input[type=password],
   fieldset input[type=text] {
-    max-width:85%;
+    max-width:100%;
   }
 }
 
@@ -659,5 +654,21 @@ span.emailaddress-display {
 input[type=email]::placeholder,
 fieldset input[type=text]::placeholder,
 fieldset input[type=password]::placeholder
-  color: #000
+  color: #777
 
+.cartOverrides input[type=email]::placeholder,
+.cartOverrides fieldset input[type=text]::placeholder,
+.cartOverrides fieldset input[type=password]::placeholder
+  color: #777
+
+.findOil 
+  input[type=email]::placeholder,
+  fieldset input[type=text]::placeholder,
+  fieldset input[type=password]::placeholder
+    color: #000
+
+@media screen and (min-width: 1000px) {
+  input.small {width:25% !important;}
+
+  input.med {width:50% !important;}
+}
