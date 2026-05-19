@@ -271,6 +271,7 @@
                                 <div class="newForm">
                                     <fieldset>
                                         <input id="" type="text" placeholder="Enter your email address" autocomplete="off">
+                                        <input id="" type="text" placeholder="Phone (optional)" autocomplete="off" class="med">
 
                                         <div class="signInHidden">
                                             <h6>&nbsp;Enter Your Password</h6>
@@ -315,8 +316,9 @@
                             <fieldset>
                                 <input id="" type="text" placeholder="Start typing to find your address" autocomplete="off">
                             </fieldset>
-                            <fieldset>
-                                <input id="" type="text" placeholder="Apartment, suite, etc (optional)" autocomplete="off">
+                            <fieldset class="simpleFlex">
+                                <input id="" type="text" placeholder="Street Address" autocomplete="off" >
+                                <input id="" type="text" placeholder="Apt, Flat, etc (optional)" autocomplete="off">
                             </fieldset>
                             <fieldset class="simpleFlex">
                                 <input id="" type="text" placeholder="City" autocomplete="off" value="">
@@ -324,10 +326,15 @@
                                 <input id="" type="text" placeholder="Post Code" autocomplete="off" value="">
                             </fieldset>
                         </div>
-                    
 
                     <span class="spacer spacer3"></span>
-                    <h5>Shipping summary</h5>
+
+                    <input type="checkbox" checked>Delivery Address is my Billing Address<br><br>
+
+                    
+
+                    <span class="spacer spacer5"></span>
+                    <h4>Shipping summary</h4>
                     <br>
                     <div class="card">
                         <div class="brand9bg brand3border">
@@ -358,8 +365,7 @@
                     </div>
 
 
-
-                    <span class="spacer spacer5"></span>
+                    <!-- span class="spacer spacer5"></span>
                     <div class="simpleFlex alignBottom alignRight">
                         <div>
                             <h4><i class="icon-lock"></i>&nbsp;Secure Payment</h4>
@@ -381,14 +387,14 @@
                             </fieldset>
                             <fieldset>
                                 <input id="" type="text" placeholder="Name on Card" autocomplete="off">
-                                <!-- input id="" type="text" placeholder="Name on Card" autocomplete="off" value="Vaughan Thompson" -->
+                                <input id="" type="text" placeholder="Name on Card" autocomplete="off" value="Vaughan Thompson"
                             </fieldset>
                             <br>
                             <fieldset>
                                 <input type="checkbox" checked>Delivery Address is my Billing Address<br><br>
                             </fieldset>
 
-                            <!-- if unselect above - address input-->
+                            
                              <div class="newForm">
                             <fieldset class="simpleFlex">
                                 <input id="" type="text" placeholder="First Name" autocomplete="off" value="">
@@ -408,7 +414,7 @@
                         </div>
 
                         </div>
-                    </div>
+                    </div -->
 
 
 
@@ -421,9 +427,20 @@
                     <input type="checkbox" checked> Create account for faster checkout next time<br><br>
                     <input type="checkbox"> Accept <a href="/checkoutTerms" target="_blank">Terms &amp; Conditions</a> 
 
+                    <span class="spacer spacer5"></span>
+
+                    <input type="button" class="ctaButton ctaShop" value="Complete Order &amp; Pay $52.75">
+
                     <span class="spacer spacer3"></span>
 
-                    <input type="button" class="ctaButton ctaShop" value="Complete Order &amp; Pay $52.75 Now">
+
+                    <div class="simpleFlex centeredVert padMe">  
+                        <img src="/images/visa.webp" alt="Visa" style="max-height: 30px; width:auto;">
+                            <img src="/images/mastercard.webp" alt="Mastercard" style="max-height: 30px; width:auto;">              
+                            <img src="/images/logos/Stripe_Logo,_revised_2016.svg" alt="Stripe Payments"  style="height:25px; width:auto;">
+                            <span class="balanceMe smaller">You will be redirected to complete payment on our secure Stripe hosted payments screen</span>
+                    </div>
+                    
                     
                     </form>
                 </section>

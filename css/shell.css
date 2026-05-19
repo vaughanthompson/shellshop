@@ -2162,6 +2162,12 @@ footer .simpleFlex.flexSpaced {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+.simpleFlex.alignLeft {
+  -webkit-box-pack: start;
+  -o-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
 i.toggleIcon:before {
   font-family: 'icomoon';
   content: '\e904';
@@ -2767,12 +2773,6 @@ tr.spanRowLeft td {
 @media screen and (max-width: 750px) {
   .cartTotals {
     padding: 10px 5px 5px 5px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .cartOverrides section.cartPanel {
-    position: sticky;
-    top: 2em;
   }
 }
 /* 
