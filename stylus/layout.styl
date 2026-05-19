@@ -967,6 +967,11 @@ article.productInfo
 /* basic sidebar page layout */
 article.basicContent header
     padding-top: padL
+article.basicContent header.halfW    
+    @media dtrigger
+        padding-right: 30vw
+        
+
 article.basicContent hr 
     margin: 2em 0 3em 0
 @media dtrigger
@@ -1001,6 +1006,8 @@ article.basicContent hr
     article.basicContent.revMob div.content section:last-of-type
         border-right: 1px solid brand3
         border-radius: 0
+    article.basicContent.revMob.noBorder div.content section:last-of-type
+        border-right: none
         
 
 /* contact */
